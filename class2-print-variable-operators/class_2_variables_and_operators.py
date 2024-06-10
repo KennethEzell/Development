@@ -40,3 +40,26 @@
 # print(5 ** 5)
 # print(2 ** 5)
 # print(3 ** 6)
+
+# Integer Division
+
+# print(10 // 3)
+# print(4 // 3)
+# print(5 // 2)
+
+# Modulo / Mod / Remainder
+
+# print(5 % 2)
+# print(10 % 4)
+
+# Using variable as placeholders
+# This is assigning integer value 1 to vaiable num_one
+
+
+num_one = 1
+num_two = 20
+
+# print(num_one)
+print(num_one + num_two)
+
+
