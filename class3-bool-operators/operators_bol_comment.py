@@ -2,28 +2,36 @@
 
 # I am a Comments
 temperature = 95 # I am an inline Comments
-# U an a standard single line Comments
-first_name = 'Thomas' ''' Multi line comment - inline'''
 
-# Eeverything between these quotes will betweeth
+# I an a standard single line Comments
+first_name = 'Thomas' ''' Multi line comment - inline'''
+last_name = 'the train' """ Inline comment with doule quotes"""
+
+'''
+Eeverything between these quotes will betweeth
+'''
+
 
 # Comment me
+
 
 length = 5
 width = 7
 
-perimeter = 2 * (length + width)
+perimeter = 2 * (length + width) # Perimenter of a triangle
 
-fahrenheith = 89
+''' Script to convert temperature '''
 
-celsius = (fahrenheith - 32) * 5/9
+fahrenheith = 89 # our temp to conver
+celsius = (fahrenheith - 32) * 5/9 #$ algorithm to convert f to c
 
-# print(celsius)
+# our output
+# print(celsius) 
 
 ''' Shortcut operators'''
 # Add 5 to me
 age = 25
-age += 5
+age += 5 # adding 5 via shortcut operator
 # print(age)
 
 year = 2024
@@ -36,18 +44,25 @@ num_one -= 20
 # print(num_one)
 
 #subtract 15
+num_two = 11
+num_two -= 15
+# print(num_two)
+
+# Multiply by 3
+my_value = 9
+my_value *=3
+# print(my_value)
 
 # Multiply by 10
 mileage = 15
-
 mileage *= 10
-
 # print(mileage)
 
-# Divide by 2 /
+# Divide by 2 
 pizza_slices = 8
 pizza_slices /= 2
 # print(pizza_slices)
+
 
 # Multiply
 
@@ -56,6 +71,7 @@ fees = 8.90
 fees /= 7 
 # print(fees)
 
+# Raise to the 3rd power
 num_three = 6
 num_three **= 3
 # print(num_three)
@@ -68,10 +84,16 @@ data **= 2
 # IONTEGER division, how many times does 3 go into 16?
 
 val_one = 16
+val_one //= 3
+# print(val_one)
 
-#Moduluis we use often to find if a value is odd or even
-# find
+# Integwer divide by 4 //
+val_two = 9
+val_two //= 4
+# print(val_two)
 
+# Modulus we use often to find if a value is odd or even
+# find the reminder if divided by 3
 val_three = 10
 val_three %= 3
 # print(val_three)
@@ -84,7 +106,6 @@ Val_four %= 5
 # Refactor me with shortcut operators
 
 fahrenheith = 89
-
 celsius = (fahrenheith - 32) * 5/9
 # print(celsius)
 
@@ -93,17 +114,22 @@ fahrenheith*= 5/9
 celsius = fahrenheith
 # print(celsius)
 
+''' Boolean Operators '''
+
 # Is 7 less than 5? <
+# print(7 < 5)
 result = (7 < 5) 
 # print("Is 7 less thahn 5?",result)
 
 # is 4 less thank or equal to 4 <=
-
-print(4 <= 4)
+# print(4 <= 4)
 result = 4 <= 4
 # print("Is 4 less than or equal to 4?", result)
 
-# iS 5 GREATER THAN OR EQUAL TO 6
+#Is 6 greater than 2? >
+print(6 > 2)
+
+# iS 5 GREATER THAN OR EQUAL TO 6 >=
 result3 = 5>=6
 
 # print("is 5 greater or equal to 6?",result3)
@@ -148,7 +174,7 @@ fname ='Taylor'
 # formatted string
 
 pet = 'dog' # MY VARIABLE TO BE USED IN MY FORMATTED STRING
-print(f'I owna {pet}')
+# print(f'I owna {pet}')
 
 
 
