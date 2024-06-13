@@ -127,7 +127,7 @@ result = 4 <= 4
 # print("Is 4 less than or equal to 4?", result)
 
 #Is 6 greater than 2? >
-print(6 > 2)
+# print(6 > 2)
 
 # iS 5 GREATER THAN OR EQUAL TO 6 >=
 result3 = 5>=6
@@ -141,9 +141,9 @@ result4 = 5 >= 6
 #IS 5 EQUAL TO 5? ==
 
 # # and
-# print(5 == 5 and 4 == 4) # True
-# print(2 == 2 and 3 == 1) # false
-# print(1 == 2 and 2 == 10) # false
+print(5 == 5 and 4 == 4) # True
+print(2 == 2 and 3 == 1) # false
+print(1 == 2 and 2 == 10) # false
 
 # log_1 = (5 == 3)
 # log_2 - (4 == 7)
