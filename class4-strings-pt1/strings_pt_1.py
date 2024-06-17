@@ -403,7 +403,8 @@ True
 
 # get user input, sanitize user input'''
 user_input = input('what is your magic word? ')
-
+user_input =user_input.strip()
+  
 print(user_input)
 
 
