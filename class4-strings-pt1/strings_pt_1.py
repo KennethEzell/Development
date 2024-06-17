@@ -394,7 +394,7 @@ Examples:
 apple
 False
 '''
-# apple_value = 'apple'.isnum()
+apple_value = 'apple'.isdigit()
 # print(apple_value)
 
 
@@ -402,10 +402,10 @@ False
 True
 
 # get user input, sanitize user input'''
-user_input = input('what is your magic word? ')
-user_input =user_input.strip()
+# user_input = input('what is your magic word? ')
+# user_input =user_input.strip()
   
-print(user_input)
+# print(user_input)
 
 
 # user_input =input('What iw yopur magic word? ')
@@ -429,7 +429,11 @@ True
 
 Hint: use len() to find the length of the string, and don’t forget to cast to int()
 
-'''
+# '''
+# get_word = input('What is your word? ')
+# get_num = input('What is your number? ')
+# print(len(get_word) > int(get_num))
+
 
 # user_input2 = ('Please enter your magic word ')
 
@@ -450,6 +454,13 @@ What string method can you use to count the number of vowels?
 
 '''
 # get input from user
+# user_input = input('Please enter your word. ')help 
+# total_count = user_input.lower().count('a') + user_input.lower().count('e') + user_input.lower().count('i') + user_input.lower().count('o') + user_input.lower().count('u') #counting the instances of a
+
+# print(f'{user_input} has {total_count} vowels.')
+
+# print(f'{user_input} has {total_count} vowels.))
+# print(user_input.count('a'))
 
 
 # user_input = input("Please enter your word: ")
@@ -477,4 +488,22 @@ User input: programming is fun
 Hint: You will have to use the len() function, string concatenation (+), and string multiplication (*)
 
 '''
+# get user input
+User_box_input = input('Please input your phrase. ') 
+# print(User_box_input)
 
+# get length of user inpurt
+User_box_input_Count = len(User_box_input)
+# print(User_box_input_Count)
+
+# create the first row of the box
+line1 = (User_box_input_Count + 2) # add 2 for beginning and ending asterisk
+# print(line1) print(User_box_input)
+print('*' * line1)
+
+# create second line of box
+line2 = '*' + User_box_input +'*'
+print(line2)
+
+# repeate the first row for bottom of box
+print('*' * line1)
