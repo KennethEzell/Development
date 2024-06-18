@@ -37,10 +37,12 @@ test_1 = (email[-4] == '.')
 
 # Test 2: It has exactly one "@" symbol, at the fifth-to-last index or earlier
 test_2 = ('@' in email[-5::-1])
-print(f'Test 2: {email} has exactlyh one "2" symbol, at the fifth to las index or earlier?', test_2)
+# print(f'Test 2: {email} has exactlyh one "2" symbol, at the fifth to las index or earlier?', test_2)
 
 
 # Test 3: There is at least one character before the "@" symbol
+test_3 = (email[0] != '@')
+print(f'test 3: there is at least one character before the "@" symbol in {email}', test_3')
 
 # Test 4: It doesn’t have any spaces (doesn’t contain " ")
 
