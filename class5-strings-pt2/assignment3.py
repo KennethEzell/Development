@@ -25,31 +25,36 @@ email = input('Hello, pleasse enter your email. ')
 
 
 # Clean data
-email = email.strip()
-
-
+email = email.strip() # clean email input with strip method
+# print(email)
+# print(len(email))
 
 # Test 1: It has a "." at the third-to-last index
 test_1 = (email[-4] == '.')
+# print(test_1)
 
 
-# print(f'Test 1: Does {email} has a "." at the tord tp the ;ast index?',test_1)
+print(f'Test 1: Does {email} has a "." at the third-to-last index?',test_1)
 
 # Test 2: It has exactly one "@" symbol, at the fifth-to-last index or earlier
 test_2 = ('@' in email[-5::-1])
-# print(f'Test 2: {email} has exactlyh one "2" symbol, at the fifth to las index or earlier?', test_2)
+# print(email[-5::-1])
+print(f'Test 2: {email} has exactly one "@" symbol, at the fifth to last index or earlier?', test_2)
 
 
 # Test 3: There is at least one character before the "@" symbol
 test_3 = (email[0] != '@')
-print(f'test 3: there is at least one character before the "@" symbol in {email}', test_3)
+# test_3b =(email.index('@') > 0) # This an alternative solution to check if at least one character before '@'
+print(f'Test 3: there is at least one character before the "@" symbol in {email}', test_3)
 
 # Test 4: It doesn’t have any spaces (doesn’t contain " ")
 test_4 =(' ' not in email)
-print(f'test 4{email} doesnot have sny spaces)', test_4)
+print(f'Test 4: {email} doesn\'t have any spaces (doesn\'t contain" ")', test_4)
 
 
 # Final Test with AND Keyword
+all_tests = test_1 and test_2 and test_3 and test_4
+print(f'Is {email} valid?', all_tests)
 # My work
 
 # Attach
