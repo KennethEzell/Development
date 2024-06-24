@@ -97,14 +97,15 @@ This is something else
 
 # '''
 
-user_input = input('Please enter your data.')
+# user_input = input('Please enter your data.')
 
-#test if it is a number
+# #test if it is a number
 
-if user_input.isdecimal():
-    print('This is a number')
-elif user_input.isalpha():
-    print('tHIS IS A WORD')
+# if user_input.isdecimal():
+#     print('This is a number')
+# elif user_input.isalpha():
+#     print('This is a word.')
+#     else 
 
     
 # User_input = input('Enter a number.')
@@ -140,7 +141,7 @@ elif user_input.isalpha():
 #     print("It's cold outside")
 
 
-# temp_f = 65
+# temp_f = 30
 # if temp_f > 70:
 #     print("It is hot outside")
 # if temp_f > 40 and temp_f < 70:
@@ -152,21 +153,21 @@ elif user_input.isalpha():
 
 # Logical operators
 # and returns true if they are both true
-
+# print(True and True)
 
 # or returns true if either one of them is true
-
+# print(True or False)
 
 # not returns the opposite
-
+# print(not x)
 
 
 # Order of Operations
-# print(True or False and False)     # and has precedence
-# print((True or False) and False)   # parentheses change precedence
+# print(True or False and False)     # and has precedence, True
+# print((True or False) and False)   # parentheses change precedence, False
 
-# print(not False or True)        # not has precedence
-# print(not (False or True))      # parentheses change precedence
+# print(not False or True)        # not has precedence, True
+# print(not (False or True))      # parentheses change precedence, False
 
 
 ''' Fun fact about True Values
@@ -177,7 +178,11 @@ Anything that isn’t empty, 0, None, or False, is considered True.
 
 
 # nested conditionals
-
+num = 5
+if num % 2 == 1: # Testing if this is odd
+    if num < 10: # is this less than 10
+        if num > 0: #is this greater than 0?
+            print('This is single digit odd number')
 
 
 '''
