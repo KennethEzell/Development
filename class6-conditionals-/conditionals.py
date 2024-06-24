@@ -18,7 +18,7 @@ fname = 'Marty'
 ''' Your turn! :)
 Write a program that asks you what the temperature is. If it is over 60 degrees, the program will give the user a print statement saying, 'It's looking like a warm one today' What potential errors may we be expecting and how can we deal with it..
 '''
-Whats_the_temp = input ('What is the Temp?')
+# Whats_the_temp = input ('What is the Temp?')
 
 # Whats_the_temp = int(Whats_the_temp)
 
@@ -41,8 +41,15 @@ Step 1 Get User's Input
 Step 2 Evaluate Data and Deliver output via Conditional
  The question is this, how can we figure out if the value is even or odd? Also, looks like we will be working with numbers. Input will always deliver a string, sounds like a job for integer casting!
 
-'''
+# '''
+# User_input = input('Enter a number.')
 
+# User_input = int(User_input)
+
+# if (User_input % 2) != 0:
+#     print(f'{User_input} is odd. ')
+# elif (User_input % 2) == 0:
+#     print(f'{User_input} is even')
 
 '''
 Elif
@@ -88,9 +95,28 @@ This is a word
 User input: 7!ab5
 This is something else
 
-'''
+# '''
 
+user_input = input('Please enter your data.')
 
+#test if it is a number
+
+if user_input.isdecimal():
+    print('This is a number')
+elif user_input.isalpha():
+    print('tHIS IS A WORD')
+
+    
+# User_input = input('Enter a number.')
+
+# User_input = float(User_input)
+
+# if User_input % 2 == 1:
+#     print(f'{User_input} is odd. ')
+# elif (User_input % 2) == 0:
+#     print(f'{User_input} is even')
+# else print('blah blah')
+    
 
 ''' Chaining Conditionals code results'''
 
