@@ -201,20 +201,31 @@ Follow the requirements, nothing more, nothing less.
 '''
 
 # Initialize system values
-# username = 'admin'
-# password = 'password'
+# sys_username = 'admin'
+# sys_password = 'password'
 
-username, password ='admin','password'
-print(username, password)
+# sys_username, sys_password ='admin','password'
 
-# Get sign on and pass from user
-# username_enter = input('Input your user name. ')
-# password_enter = input('Input user password. ')
-
+# # Get sign on and pass from user
+# username = input('Input your user name. ')
+# password = input('Input user password. ')
 
 # Evaluate and Output (using conditionals, boolean operators, and logical operators)
+# if sys_username == username and sys_password == password:
+#     print('Login successful!')
+# else:
+#     print('Login Incorrect')
 
 # if username == username_enter:
 #     print('Username is correct.')
     # elif username != username_enter:
 
+age = input('Input your age. ')
+age = int(age)
+
+if age < 10:
+    print('Children')
+elif age > 60:
+    print('Senior Citizen')
+elif age > 10 and age < 60:
+    print('Adult') 
