@@ -179,26 +179,42 @@ Anything that isn’t empty, 0, None, or False, is considered True.
 
 # nested conditionals
 num = 5
-if num % 2 == 1: # Testing if this is odd
-    if num < 10: # is this less than 10
-        if num > 0: #is this greater than 0?
-            print('This is single digit odd number')
+# if num % 2 == 1: # Testing if this is odd
+#     if num < 10: # is this less than 10
+#         if num > 0: #is this greater than 0?
+
+# if num % 2 and num < 10 and num > 0:
+#     # print('This is a single digit odd number')
 
 
 '''
 You’re working on a project to develop a login system for a website. The website requires the user to enter a username and password to log in. Write a Python program that checks whether the user entered the correct username and password.
-Create two variables called username and password and set them to any valid string values.
-Prompt the user to enter their username and password using the input() function.
-Use conditionals and logical operators to check whether the username and password entered by the user match the username and password variables.
+
+1. Create two variables called username and password and set them to any valid string values.
+
+2. Prompt the user to enter their username and password using the input() function.
+
+3. Use conditionals and logical operators to check whether the username and password entered by the user match the username and password variables.
 If they match, print “Login successful.” If they don’t, print “Incorrect username or password.”
 
 Follow the requirements, nothing more, nothing less. 
 '''
 
 # Initialize system values
+# username = 'admin'
+# password = 'password'
 
+username, password ='admin','password'
+print(username, password)
 
 # Get sign on and pass from user
+# username_enter = input('Input your user name. ')
+# password_enter = input('Input user password. ')
 
 
 # Evaluate and Output (using conditionals, boolean operators, and logical operators)
+
+# if username == username_enter:
+#     print('Username is correct.')
+    # elif username != username_enter:
+
