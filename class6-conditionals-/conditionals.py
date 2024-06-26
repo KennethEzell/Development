@@ -23,7 +23,7 @@ Write a program that asks you what the temperature is. If it is over 60 degrees,
 # Whats_the_temp = int(Whats_the_temp)
 
 # if Whats_the_temp > 60:
-    # print('Its looking like a warm one today.')
+#     print('Its looking like a warm one today.')
 
 
 '''
@@ -42,9 +42,9 @@ Step 2 Evaluate Data and Deliver output via Conditional
  The question is this, how can we figure out if the value is even or odd? Also, looks like we will be working with numbers. Input will always deliver a string, sounds like a job for integer casting!
 
 # '''
-# User_input = input('Enter a number.')
+# User_input = input('Enter a number.') #  cast to integer (int) to prevent error
 
-# User_input = int(User_input)
+# User_input = int(User_input) 
 
 # if (User_input % 2) != 0:
 #     print(f'{User_input} is odd. ')
@@ -62,7 +62,14 @@ This is even
 
 
 '''
+# User_input = input('Enter a number.') #  cast to integer (int) to prevent error
 
+# User_input = int(User_input) 
+
+# if (User_input % 2) != 0:
+#     print(f'{User_input} is odd. ')
+# elif (User_input % 2) == 0:
+#     print(f'{User_input} is even')
 
 
 '''
@@ -78,6 +85,15 @@ User input: 9.2
 Unknown
 
 '''
+# User_input = input('Enter a number.')
+# User_input = float(User_input) 
+
+# if (User_input % 2) == 1:
+#     print(f'{User_input} is odd. ')
+# elif (User_input % 2) == 0:
+#     print(f'{User_input} is even')
+# else:
+#     print('Unknown')
 
 
 
@@ -97,15 +113,16 @@ This is something else
 
 # '''
 
-# user_input = input('Please enter your data.')
+# user_input = input('Please enter your text. ')
 
-# #test if it is a number
+#test if it is a number
 
 # if user_input.isdecimal():
 #     print('This is a number')
 # elif user_input.isalpha():
-#     print('This is a word.')
-#     else 
+#     print('This is a word. ')
+# else:
+#     print('This is something else. ')
 
     
 # User_input = input('Enter a number.')
@@ -141,7 +158,7 @@ This is something else
 #     print("It's cold outside")
 
 
-# temp_f = 30
+# temp_f = 65
 # if temp_f > 70:
 #     print("It is hot outside")
 # if temp_f > 40 and temp_f < 70:
@@ -159,10 +176,11 @@ This is something else
 # print(True or False)
 
 # not returns the opposite
+x = False
 # print(not x)
 
 
-# Order of Operations
+# Order of Operations - first "Not" next "And" next "Or"
 # print(True or False and False)     # and has precedence, True
 # print((True or False) and False)   # parentheses change precedence, False
 
@@ -182,9 +200,10 @@ num = 5
 # if num % 2 == 1: # Testing if this is odd
 #     if num < 10: # is this less than 10
 #         if num > 0: #is this greater than 0?
+#             print('This is a single digit odd number. ')
 
 # if num % 2 and num < 10 and num > 0:
-#     # print('This is a single digit odd number')
+#  print('This is a single digit odd number')
 
 
 '''
@@ -200,32 +219,33 @@ If they match, print “Login successful.” If they don’t, print “Incorrect
 Follow the requirements, nothing more, nothing less. 
 '''
 
-# Initialize system values
+# Initialize system values - seperately on two lines
 # sys_username = 'admin'
 # sys_password = 'password'
 
-# sys_username, sys_password ='admin','password'
+sys_username, sys_password ='admin','password' # initializing on one line 
+# print(sys_username, sys_password)
 
-# # Get sign on and pass from user
-# username = input('Input your user name. ')
-# password = input('Input user password. ')
+# Get sign on and pass from user
+username = input('Input your user name. ')
+password = input('Input user password. ')
 
 # Evaluate and Output (using conditionals, boolean operators, and logical operators)
-# if sys_username == username and sys_password == password:
-#     print('Login successful!')
-# else:
-#     print('Login Incorrect')
+if sys_username == username and sys_password == password:
+    print('Login successful!')
+else:
+    print('Login Incorrect')
 
 # if username == username_enter:
 #     print('Username is correct.')
     # elif username != username_enter:
 
-age = input('Input your age. ')
-age = int(age)
+# age = input('Input your age. ')
+# age = int(age)
 
-if age < 10:
-    print('Children')
-elif age > 60:
-    print('Senior Citizen')
-elif age > 10 and age < 60:
-    print('Adult') 
+# if age < 10:
+#     print('Children')
+# elif age > 60:
+#     print('Senior Citizen')
+# elif age > 10 and age < 60:
+#     print('Adult') 
