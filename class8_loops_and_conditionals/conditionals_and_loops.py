@@ -41,24 +41,24 @@ In example 2, we are able to break out of the loop as soon as we fulfill our con
 '''
 # Example 1
 # Initializing the variables
-userin = ''
-sum = 0
+# userin = ''
+# sum = 0
 
-#Start loop
-while True:
-    # get input from user
-    userdata = input("Please enter a value: ")
+# #Start loop
+# while True:
+#     # get input from user
+#     userdata = input("Please enter a value: ")
     
-    # Pyton isnumeric testing to check if valid num
-    if not userdata.isnumeric():
-        print('Error: Not a number. ')
-        break
-# iF Equal to 0, we print the sum and then we are done
-    if userdata == '0':
-        print(f'Sum: {sum}')
-        break
-    else: 
-        sum += int(userdata)
+#     # Pyton isnumeric testing to check if valid num
+#     if not userdata.isnumeric():
+#         print('Error: Not a number. ')
+#         break
+# # iF Equal to 0, we print the sum and then we are done
+#     if userdata == '0':
+#         print(f'Sum: {sum}')
+#         break
+#     else: 
+#         sum += int(userdata)
     # print(userin)
 
 
@@ -108,9 +108,19 @@ Error: Not a number
 '''5 Letter Word Program
 Create a program which accepts only words with 5 letters. If the user inputs any other word with more than or less than 5 letters, force them to start over again. If the word has 5 letters, congratulate the user on inputting a 5 letter word
 '''
+# userin = ''
+# count = 0
 
+# while True:
 
+#     userin = input('Please ente yur value: ')
 
+#     if len(userin) != 5:
+#         print('Word is not 5 letters. ')
+#         continue
+#     else:
+#         print(f'Great, {userin} has 5 letters!')
+#         break
 
 '''
 Example
@@ -118,7 +128,13 @@ Example
 Use the continue keyword to loop through a string and only print the vowels.
 
 '''
+# mystring = 'saturday'
+# vowels = 'aeiou'
 
+# for x in mystring:
+#     if x in vowels:
+#         print(x)
+#         continue
 
 
 '''
@@ -130,6 +146,22 @@ Loop through each digit of the number, and only add it to the sum if it's even.
 Print the sum of all the even digits at the end. 
 Make sure to use the continue keyword.
 '''
+
+sum = 0
+
+while True:
+    userin = input('Enter a number: ')
+
+    if userin.isnumeric():
+        print('I am a number')
+        break
+
+    else:
+        print('Please enter a valid number. ')
+
+    
+
+
 
 
 
