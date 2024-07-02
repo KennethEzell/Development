@@ -147,17 +147,25 @@ Print the sum of all the even digits at the end.
 Make sure to use the continue keyword.
 '''
 
-sum = 0
+# sum = 0
 
-while True:
-    userin = input('Enter a number: ')
+# while True:
+#     userin = input('Enter a number: ')
 
-    if userin.isnumeric():
-        print('I am a number')
-        break
+#     if userin.isnumeric():
+#         for u in userin:
+#             u = int(u)
+#             if u % 2 == 0:
+#                 sum += u
+#                 continue
+#         print(sum)
+#         break
+#         # print('I am a number')
+#         # break
 
-    else:
-        print('Please enter a valid number. ')
+#     else:
+#         print('Please enter a valid number. ')
+#         continue
 
     
 
@@ -208,13 +216,32 @@ Make sure to use break and/or continue.
 ''' Following the plan '''
 # initialize variables to capture string and total
 
+addstring = ''
+total = 0
+
 # start loop
 
-# get string
+while True:
+    pass
+    # get string
+    userin = input('Please input your data. ')
+   
+    # If the string is empty, stop the loop
+    if userin == '':
+        print('Goodbye')
+        break
 
-# If the string is empty, stop the loop
 
-# If the string is a number, convert it to a float and add it to a total
+    print('hello')
+    #     break
+    # #  If the string is a number, convert it to a float and add it to a total
+    # elif userin.isnumer():
+    #     total += float(userin)
+    #     print(addstring)
+
+
+
+#
 
 # If the string is a set of letters, concatenate to the other letter strings passed in.
 
