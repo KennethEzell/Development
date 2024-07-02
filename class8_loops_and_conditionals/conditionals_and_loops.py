@@ -231,10 +231,20 @@ while True:
         print('Goodbye')
         break
 
-
-    print('hello')
+    # print('hello')
     #     break
     # #  If the string is a number, convert it to a float and add it to a total
+    if userin.isnumeric():
+        userin = float(userin)
+        total += userin
+        print(f'Your total is {total}')
+        continue
+
+    if userin.isalpha():
+        addstring += userin
+        print(addstring)
+        continue
+
     # elif userin.isnumer():
     #     total += float(userin)
     #     print(addstring)
