@@ -42,17 +42,21 @@ In example 2, we are able to break out of the loop as soon as we fulfill our con
 # Example 1
 # Initializing the variables
 # userin = ''
+
+# while userin != 'stop':
+#     userin = input("Please enter your text or type \'stop\' to stop: ").casefold()
+#     print('We are going back to try to re-enter the loop, and test your input')
 # sum = 0
 
 # #Start loop
-# while True:
-#     # get input from user
-#     userdata = input("Please enter a value: ")
+while True:
+    # get input from user
+    # userdata = input("Please enter a value: ")
     
-#     # Pyton isnumeric testing to check if valid num
-#     if not userdata.isnumeric():
-#         print('Error: Not a number. ')
-#         break
+    # # Pyton isnumeric testing to check if valid num
+    # if not userdata.isnumeric():
+    #     print('Error: Not a number. ')
+        break
 # # iF Equal to 0, we print the sum and then we are done
 #     if userdata == '0':
 #         print(f'Sum: {sum}')
@@ -101,27 +105,38 @@ c
 Error: Not a number
 '''
 
+# total = 0
 
+# while True:
+
+#     userin = input('Please enter a value: ')
+#     if not userin.isnumeric():
+#           print('Not a number. ')
+#           break
+#     # if equal to 0, we print the sum and then we are done
+#     if userin == "0":
+#           print(f'Sum: {total}')
+#           break
+#     else:
+#           total += int(userin)
+
+    # continue
+    
 
 
 
 '''5 Letter Word Program
 Create a program which accepts only words with 5 letters. If the user inputs any other word with more than or less than 5 letters, force them to start over again. If the word has 5 letters, congratulate the user on inputting a 5 letter word
 '''
-# userin = ''
-# count = 0
 
 # while True:
-
-#     userin = input('Please ente yur value: ')
-
+#     userin = input('Please enter your word: ')
 #     if len(userin) != 5:
-#         print('Word is not 5 letters. ')
-#         continue
+#         print('Your word is not 5 characters long. ')
+        
 #     else:
-#         print(f'Great, {userin} has 5 letters!')
+#         print('Congratulations, you word has 5 characters! ')
 #         break
-
 '''
 Example
 
@@ -147,7 +162,7 @@ Print the sum of all the even digits at the end.
 Make sure to use the continue keyword.
 '''
 
-# sum = 0
+sum = 0
 
 # while True:
 #     userin = input('Enter a number: ')
@@ -168,13 +183,6 @@ Make sure to use the continue keyword.
 #         continue
 
     
-
-
-
-
-
-
-
 ''' Break vs. Continue '''
 
 word = 'hello'
@@ -221,29 +229,29 @@ total = 0
 
 # start loop
 
-while True:
-    pass
-    # get string
-    userin = input('Please input your data. ')
+# while True:
+#     pass
+#     # get string
+#     userin = input('Please input your data. ')
    
-    # If the string is empty, stop the loop
-    if userin == '':
-        print('Goodbye')
-        break
+#     # If the string is empty, stop the loop
+#     if userin == '':
+#         print('Goodbye')
+#         break
 
     # print('hello')
     #     break
     # #  If the string is a number, convert it to a float and add it to a total
-    if userin.isnumeric():
-        userin = float(userin)
-        total += userin
-        print(f'Your total is {total}')
-        continue
+    # if userin.isnumeric():
+    #     userin = float(userin)
+    #     total += userin
+    #     print(f'Your total is {total}')
+    #     continue
 
-    if userin.isalpha():
-        addstring += userin
-        print(addstring)
-        continue
+    # if userin.isalpha():
+    #     addstring += userin
+    #     print(addstring)
+    #     continue
 
     # elif userin.isnumer():
     #     total += float(userin)
