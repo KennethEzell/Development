@@ -201,13 +201,24 @@ Exercise: List of Pets
 You want to make a list containing the names of pets. Keep prompting the user for a pet name until they enter "stop". If it's a new pet, add it to the list. If the list already has that pet, don't add it.
 
 '''
-pet = []
-petsname = ''
+# pet = []
+# petsname = ''
 
-while True:
-    petsname = input('Please enter the name of your pet!: ')
-    print(petsname)
-    break
+# while True:
+#     petsname = input('Please enter the name of your pet!: ')
+
+#     if petsname == 'stop':
+#         break
+
+#     elif petsname not in pet:
+#         # petsname = petsname.title()
+#         pet.append(petsname)
+#         print(f'We have just added {petsname} to your pets list')
+#     else:
+#         print(f'{petsname} is already in your list')
+
+# print(pet)
+    
 
 '''
 Example: Removing Values
@@ -217,9 +228,26 @@ You have a list of numbers, but it contains multiple of the number 2. Remove the
 
 removing_values = [1, 2, 3, 2, 2, 3, 4, 5, 6, 2, 2, 2, 2, 2, 1, 1, 5, 6, 5]
 
+count = 0
+# newlist = ''
+# while True:
+#     for x in removing_values:
+#         if x == 2:
+#             count += 1
+#             x += newlist
+#         elif x == 2:
+#             x.clear()
+#         else:
+#             x += newlist
+#     break
 
+countoftwo = removing_values.count(2)
+print(countoftwo)
 
+while removing_values.count(2) != 1:
+    removing_values.remove(2)
 
+print(removing_values)
 '''
 
 Exercise: Removing All Duplicates
