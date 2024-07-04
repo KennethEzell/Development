@@ -240,14 +240,15 @@ count = 0
 #         else:
 #             x += newlist
 #     break
+#####################################
 
-countoftwo = removing_values.count(2)
-print(countoftwo)
+# countoftwo = removing_values.count(2)
+# print(countoftwo)
 
-while removing_values.count(2) != 1:
-    removing_values.remove(2)
+# while removing_values.count(2) != 1:
+#     removing_values.remove(2)
 
-print(removing_values)
+# print(removing_values)
 '''
 
 Exercise: Removing All Duplicates
@@ -260,5 +261,20 @@ Hint 2: You might want to make a copy of the original list to use as reference. 
 
 # original list
 states = ['alaska', 'alaska', 'alaska', 'alabama', 'alabama', 'new york', 'new york', 'new york']
+# create a copy
+copystates = states.copy()
+
+# capture duplicates
+uniquestates = list ()
+
+for s in copystates:
+    if s not in uniquestates:
+        uniquestates.append(s)
+
+print(uniquestates)
+    
+    
+    #  copystates = set(copystates)
 
 
+# print(copystates)
