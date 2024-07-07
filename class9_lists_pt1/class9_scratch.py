@@ -95,6 +95,17 @@ pet = []
 pets_name = ''
 
 while True:
-    pets_name = input('Please enter the name of your pet: ')
-    print(pets_name)
-    break
+    pets_name = input('Please enter the name of your pet: ').lower()
+
+    if pets_name == 'stop':
+        break
+    elif pets_name not in pet:
+        pet.append(pets_name)
+        print(f'We has just added {pets_name} to the list of pets')
+    else:
+        print(f'{pets_name} is already in the list.')
+        
+print(pet)    
+
+    
+    
