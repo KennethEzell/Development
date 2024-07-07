@@ -111,9 +111,9 @@ sort() Sorts the list
 
 # insert() Adds an element at the specified position
 
-# coding_language = 'Python'
-# other_languages = ['Javascript', 'Java', 'R']
-# other_languages.insert(6, coding_language)
+coding_language = 'Python'
+other_languages = ['Javascript', 'Java', 'R']
+other_languages.insert(0, coding_language)
 # print(other_languages)
 
 
@@ -127,15 +127,20 @@ weather = ['sunny', 'rainy', 'mild']
 
 # remove() Removes the first item with the specified value
 
-# movies = ['avengers endgame', 'avengers endgame', 'dune', 'frozen']
-# movies.remove('avengers endgame')
-# # print(movies)
+movies = ['avengers endgame', 'avengers endgame', 'dune', 'frozen']
+movies.remove('avengers endgame')
+# print(movies)
 
 # # reverse() Reverses the order of the list
-# num_list = [1, 2, 3, 4, 5, 6]
-# num_list.reverse()
+num_list = [1, 2, 3, 4, 5, 6]
+num_list.reverse()
 # print(num_list)
+
 # sorted() sorts the list
+letters = ['z', 'b',  'f', 'r']
+letters.sort()
+# print(letters)
+
 
 # sort() Sorts the list
 
@@ -147,7 +152,15 @@ weather = ['sunny', 'rainy', 'mild']
 # print(new_letters)
 
 
-# nums = [4, 5, 10, 19.8, 1, 1004]
+nums = [4, 5, 10, 19.8, 1, 1004]
+nums.sort()
+
+# print(nums)
+
+new_nums = sorted(nums)
+new_letters = sorted(letters)
+# print(new_nums, new_letters)
+
 
 
 ''' Exercise
@@ -183,17 +196,17 @@ Make sure you filter out any repeats.
 
 old_list = ['Wednesday','Thursday', 'Friday', True, ['blue', 'green', 'red'], {"First Name": "Michelle"}, 12.23, {'Sunday', 'Monday', 'Tuesday'}, (1, 2, 3, 4, 5)]
 
-# ERROR
-# newlist = []
+# new_list = []
 
-# for o in old_list:
-#     newlist.append(type(o))
+# for x in old_list:
+#     # print(type(x), x)
 
-# # print(newlist)
-   
-# norepeats = list(set(newlist))
+#     new_list.append(type(x))
+# print(new_list)
 
-# print(norepeats)
+# no_repeats = list(set(list(new_list)))
+
+# print(no_repeats)
 
 '''
 Exercise: List of Pets
@@ -260,18 +273,18 @@ Hint 2: You might want to make a copy of the original list to use as reference. 
 
 
 # original list
-states = ['alaska', 'alaska', 'alaska', 'alabama', 'alabama', 'new york', 'new york', 'new york']
-# create a copy
-copystates = states.copy()
+# states = ['alaska', 'alaska', 'alaska', 'alabama', 'alabama', 'new york', 'new york', 'new york']
+# # create a copy
+# copystates = states.copy()
 
-# capture duplicates
-uniquestates = list ()
+# # capture duplicates
+# uniquestates = list ()
 
-for s in copystates:
-    if s not in uniquestates:
-        uniquestates.append(s)
+# for s in copystates:
+#     if s not in uniquestates:
+#         uniquestates.append(s)
 
-print(uniquestates)
+# print(uniquestates)
     
     
     #  copystates = set(copystates)
