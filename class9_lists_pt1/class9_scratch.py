@@ -91,21 +91,64 @@ Exercise: List of Pets
 You want to make a list containing the names of pets. Keep prompting the user for a pet name until they enter "stop". If it's a new pet, add it to the list. If the list already has that pet, don't add it.
 
 '''
-pet = []
-pets_name = ''
+# pet = []
+# pets_name = ''
 
-while True:
-    pets_name = input('Please enter the name of your pet: ').lower()
+# while True:
+#     pets_name = input('Please enter the name of your pet: ').lower()
 
-    if pets_name == 'stop':
-        break
-    elif pets_name not in pet:
-        pet.append(pets_name)
-        print(f'We has just added {pets_name} to the list of pets')
-    else:
-        print(f'{pets_name} is already in the list.')
+#     if pets_name == 'stop':
+#         break
+#     elif pets_name not in pet:
+#         pets_name = pets_name.title() # capitalize the pet name
+#         pet.append(pets_name)
+#         print(f'We has just added {pets_name} to the list of pets')
+#     else:
+#         print(f'{pets_name} is already in the list.')
+
+# print(pet)    
+
+    
+
+# removing_values = [1, 2, 3, 2, 2, 3, 4, 5, 6, 2, 2, 2, 2, 2, 1, 1, 5, 6, 5]
+
+# without_2 = []
+
+# count = 0
+
+# for x in removing_values:
+#     if x == 2 and count == 0:
+#         count += 1
+#         without_2 == without_2.append(x)
         
-print(pet)    
+#     elif x != 2:
+#         without_2 == without_2.append(x)
 
-    
-    
+# print(without_2)
+
+        
+'''
+
+Exercise: Removing All Duplicates
+You have a list storing important data for your company, but it contains some duplicate entries. Go through your list and remove all the duplicates. When you're done, each item should appear in the list exactly once.
+Hint: How would you expand our previous example, which removed duplicates of one value, to remove duplicates of all values?
+Hint 2: You might want to make a copy of the original list to use as reference. You may want to use more than one loop.
+
+'''
+# countoftwo = removing_values.count(2)
+# print(countoftwo)
+
+# while removing_values.count(2) != 1:
+#     removing_values.remove(2)
+
+# original list
+states = ['alaska', 'alaska', 'alaska', 'alabama', 'alabama', 'new york', 'new york', 'new york']
+# create a copy
+copystates = states.copy()
+
+
+
+# copystates = set(copystates)
+# print(copystates)
+
+
