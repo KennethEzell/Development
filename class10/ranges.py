@@ -9,11 +9,18 @@ Ranges
 
 # Using the range function, lets count to 20
 
+twenty_count = range(21)
 
-
+# for t in twenty_count:
+#     print(t, end='')
 
 ''' Let's try these '''
 
+# for i in range(16, 2, -3):
+#     print(i, end='')
+
+# for i in range(4):
+#     print(i, i+i, sep=', ')
 
 
 
@@ -23,6 +30,10 @@ Ranges
 '''
 Write a range that is every five years from 1960 to 2000.
 '''
+# five_years = range(1960, 2001, 5)
+
+# for e in five_years:
+#     print(e , end='')
 
 
 '''
@@ -31,13 +42,15 @@ range(start, stop, step)
 
 
 
-
-
-
 '''
 Write a range that counts down from 30 to 0
 '''
+# count_down = range(30, -1, -1)
 
+# for t in count_down:
+#     print(t, end=' ')
+
+# my_range = reversed(range())
 
 
 '''
@@ -51,6 +64,12 @@ planets = ["mercury", "venus", "earth", "mars"]
 
 planets = ["mercury", "venus", "earth", "mars"]
 output = ''
+
+
+for x in range(len(planets)):
+    output += f'{x}: {planets[x]}'
+print(output)
+
 
 
 
