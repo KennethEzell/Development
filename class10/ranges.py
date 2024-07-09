@@ -9,7 +9,7 @@ Ranges
 
 # Using the range function, lets count to 20
 
-twenty_count = range(21)
+# twenty_count = range(21)
 
 # for t in twenty_count:
 #     print(t, end='')
@@ -62,17 +62,13 @@ planets = ["mercury", "venus", "earth", "mars"]
 0: mercury, 1: venus, 2: earth, 3: mars
 '''
 
-planets = ["mercury", "venus", "earth", "mars"]
-output = ''
+# planets = ["mercury", "venus", "earth", "mars"]
+# output = ''
 
 
-for x in range(len(planets)):
-    output += f'{x}: {planets[x]}'
-print(output)
-
-
-
-
+# for x in range(len(planets)):
+#     output += f'{x}: {planets[x]}'
+# print(output)
 
 
 ''' Exercise
@@ -86,15 +82,65 @@ Bob's job title is accountant.
 Cynthia's job title is engineer.
 Abdul's job title is recruiter.
 
-'''
-
+# '''
+# HELP ME
 
 employees = ['Bob', 'Cynthia', 'Abdul']
 job_titles = ['accountant', 'engineer', 'recruiter']
 
-
+# for x in range(len(employees):
+#    print(f'{employees[x]} is an {job_titles}' )
 
 '''
 Write some code that creates a range based on what the user enters. 
 Challenge: you can make a range with 1, 2, or 3 numbers. How would you allow the user to pick any of these options?
 '''
+
+# options = range(3)
+# print(options, end='')
+
+
+while True:
+
+    choice = input('choose 1 2 or 3 parameters for you range. ')
+
+    # if choice == '1':
+    #     start_1 = int(input('how long is your range: '))
+    #     output_1 = range(start_1)
+    #     for o in output_1:
+    #         print(o, end='')
+    #         break
+    # if choice == '2':
+    #     start_2 = int(input('How long is start value: '))
+    #     stop_2 = int(input('what is your stop value'))
+    #     output_2 = range(start_2, stop_2)
+    #     for o in output_2:
+    #         print(o, end=' ')
+    #     break
+
+    if choice == '1':
+        start_1 = int(input("How long is your range: "))
+        output_1 = range(start_1)
+        for o in output_1:
+            print(o, end=' ')
+        break
+ 
+    if choice == '2':
+        start_2 = int(input("How long is start value: "))
+        stop_2 = int(input('What is your stop value: '))
+        output_2 = range(start_2, stop_2)
+        for o in output_2:
+            print(o, end=' ')
+        break
+
+    if choice == '3':
+        start_3 = int(input("How long is start value: "))
+        stop_3 = int(input('What is your stop value: '))
+        increment = int(input('what is your increment: '))
+        output_3 = range(start_3, stop_3, increment)
+        for o in output_3:
+            print(o, end=' ')
+        break
+    else:
+        print('you must enter 1, 2, or 3')
+        continue
