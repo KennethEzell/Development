@@ -19,24 +19,33 @@ error_msgs = []
 
 ''' Start your while loop '''
 while True:
-    username = input('Please enter your username: ') #''' Get your username and password'''
-    print(username)
+
+#''' Get your username and password'''
+
+    username = input('Please enter your username: ') 
+    
+
+#''' Test your username and enforce logic'''
+
     if username[0].islower():
-        print('first letter is lowercase')
+        print('Great! Your first letter is lowercase')
      
     else: 
-        print('First letter must be lower case.')
+        print('Your first letter must be lower case.')
         username = input('Please enter your username: ')
+
+ #''' Test your password and enforce logic'''
          
     userpassword = input('Please enter your password: ')
     print(userpassword)
+
     break
 
 
-''' Test your username and enforce logic'''
 
 
-''' Test your password and enforce logic'''
+
+
 
 
 
