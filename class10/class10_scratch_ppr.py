@@ -36,34 +36,50 @@
 
 # for i in range(len(employees)):
 #     print(employees[i] + "'s job title is " + job_titles[i])
-output = []
+# output = []
 
-while True:
-    choice = input('Choose 1, 2, or 3 parameters for your range.')
-    if choice == '1':
-        start1 = int(input('how long is your range? '))
-        output1 = range(start1)
-        for o in output1:
-            print(o, end='')
-        break
-    if choice == '2':
-        start2 = int(input('how long is your range? '))
-        stop2 = int(input('enter your stop value. '))
-        output2 = range(start2,stop2)
-        for o in output2:
-            print(o)
-        break
-    if choice == '3':
-        start3 = int(input('how long is your range? '))
-        stop3 = int(input('enter your stop value. '))
-        interval3 = int(input('enter your interval. '))
-        output3 = range(start3, stop3, interval3)
-        for o in output3:
-            print(o, end=' ')
-        break
-    else:
-        print('you must enter 1, 2, or 3.')
-        continue
+# while True:
+#     choice = input('Choose 1, 2, or 3 parameters for your range.')
+#     if choice == '1':
+#         start1 = int(input('how long is your range? '))
+#         output1 = range(start1)
+#         for o in output1:
+#             print(o, end='')
+#             break
+
+#     if choice == '2':
+#         start2 = int(input('how long is your range? '))
+#         stop2 = int(input('enter your stop value. '))
+#         output2 = range(start2,stop2)
+#         for o in output2:
+#             print(o)
+#         break
+#     if choice == '3':
+#         start3 = int(input('how long is your range? '))
+#         stop3 = int(input('enter your stop value. '))
+#         interval3 = int(input('enter your interval. '))
+#         output3 = range(start3, stop3, interval3)
+#         for o in output3:
+#             print(o, end=' ')
+#         break
+    # if choice == '2':
+    #     start2 = int(input('how long is your range? '))
+    #     stop2 = int(input('enter your stop value. '))
+    #     output2 = range(start2, stop2)
+    #     for o in output2:
+    #         print(o)
+    #     break
+    # if choice == '3':
+    #     start3 = int(input('how long is your range? '))
+    #     stop3 = int(input('enter your stop value. '))
+    #     interval3 = int(input('enter your interval. '))
+    #     output3 = range(start3, stop3, interval3)
+    #     for o in output3:
+    #         print(o, end=' ')
+    #     break
+    # else:
+    #     print('you must enter 1, 2, or 3.')
+    #     continue
 
 
     #     your_range = range(choice)
@@ -83,4 +99,16 @@ while True:
 
 
  
- 
+while True:
+
+    choice = input("Choose 1, 2, or 3 parameters for your range. ")
+
+
+    if choice == '1':
+        start_1 = int(input("How long is your range: "))
+        output_1 = range(start_1)
+        for o in output_1:
+            print(o, end=' ')
+        break
+
+    

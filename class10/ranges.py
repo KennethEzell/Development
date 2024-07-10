@@ -107,37 +107,54 @@ Challenge: you can make a range with 1, 2, or 3 numbers. How would you allow the
 # print(options, end='')
 
 
-# while True:
+while True:
 
-    # choice = input('choose 1 2 or 3 parameters for you range. ')
+    choice = input('choose 1 2 or 3 parameters for you range. ')
 
     # if choice == '1':
     #     start_1 = int(input('how long is your range: '))
     #     output_1 = range(start_1)
-    #     for o in output_1:
-    #         print(o, end='') 
-    #         break
-    # if choice == '2':
-    #     start_2 = int(input('How long is start value: '))
-    #     stop_2 = int(input('what is your stop value'))
-    #     output_2 = range(start_2, stop_2)
-    #     for o in output_2:
-    #         print(o, end=' ')
-    #     break
+    #     # for o in output_1:
+    #     #  break
+    # # if choice == '2':
+    # #     start_2 = int(input('How long is start value: '))
+    # #     stop_2 = int(input('what is your stop value'))
+    # #     output_2 = range(start_2, stop_2)
+    # #     for o in output_2:
+    # #         print(o, end=' ')
+    # #     break
 
-    # if choice == '1':
-    #     start_1 = int(input("How long is your range: "))
-    #     output_1 = range(start_1)
-    #     for o in output_1:
-    #         print(o, end=' ')
-    #     break
+    if choice == '1':
+        start_1 = int(input("What is your start value: "))
+        output_1 = range(start_1)
+        for o in output_1:
+            print(o, end=' ')
+        break
  
+    if choice == '2':
+        start_2 = int(input("What is your start value: "))
+        stop_2 = int(input("what is your stop value: "))
+        output_2 = range(start_2, stop_2)
+        for o in output_2:
+            print(o, end=' ')
+        break
+
+
+    if choice == '3':
+        start_3 = int(input("What is your start value: "))
+        stop_3 = int(input("what is your stop value: "))
+        interval_3 = int(input("What is your interval value: "))
+        output_3 = range(start_3, stop_3, interval_3)
+        for o in output_3:
+            print(o, end=' ')
+        break    
     # if choice == '2':
     #     start_2 = int(input("How long is start value: "))
     #     stop_2 = int(input('What is your stop value: '))
     #     output_2 = range(start_2, stop_2)
     #     for o in output_2:
     #         print(o, end=' ')
+    #     break
     #     break
 
     # if choice == '3':
