@@ -65,11 +65,14 @@ planets = ["mercury", "venus", "earth", "mars"]
 
 # planets = ["mercury", "venus", "earth", "mars"]
 # output = ''
-
+# # 0: mercury, 1: venus, 2: earth, 3: mars
 
 # for x in range(len(planets)):
-#     output += f'{x}: {planets[x]}'
+#     output += f' {x}: {planets[x]},'
 # print(output)
+
+        # print(f'{x}, {end=' '}')
+# print(f'{range(len(planets), )}: {(planets)}, end=', '')
 
 
 ''' Exercise
@@ -84,10 +87,13 @@ Cynthia's job title is engineer.
 Abdul's job title is recruiter.
 
 # '''
-# HELP ME
 
-employees = ['Bob', 'Cynthia', 'Abdul']
-job_titles = ['accountant', 'engineer', 'recruiter']
+
+# employees = ['Bob', 'Cynthia', 'Abdul']
+# job_titles = ['accountant', 'engineer', 'recruiter']
+
+# for i in range(len(employees)):
+#     print(employees[i] + "'s job title is " + job_titles[i])
 
 # for x in range(len(employees):
 #    print(f'{employees[x]} is an {job_titles}' )
@@ -109,7 +115,7 @@ Challenge: you can make a range with 1, 2, or 3 numbers. How would you allow the
     #     start_1 = int(input('how long is your range: '))
     #     output_1 = range(start_1)
     #     for o in output_1:
-    #         print(o, end='')
+    #         print(o, end='') 
     #         break
     # if choice == '2':
     #     start_2 = int(input('How long is start value: '))
