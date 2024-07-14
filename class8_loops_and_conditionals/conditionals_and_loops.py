@@ -40,7 +40,7 @@ In example 2, we are able to break out of the loop as soon as we fulfill our con
 
 '''
 # Example 1
-# Initializing the variables
+# # Initializing the variables
 # userin = ''
 
 # while userin != 'stop':
@@ -48,23 +48,22 @@ In example 2, we are able to break out of the loop as soon as we fulfill our con
 #     print('We are going back to try to re-enter the loop, and test your input')
 # sum = 0
 
-# #Start loop
-while True:
-    # get input from user
-    # userdata = input("Please enter a value: ")
+# # #Start loop
+# while True:
+#     # get input from user
+#     userdata = input("Please enter a value: ")
     
-    # # Pyton isnumeric testing to check if valid num
-    # if not userdata.isnumeric():
-    #     print('Error: Not a number. ')
-        break
+#     # Pyton isnumeric testing to check if valid num
+#     if not userdata.isnumeric():
+#         print('Error: Not a number. ')
+#         break
 # # iF Equal to 0, we print the sum and then we are done
 #     if userdata == '0':
 #         print(f'Sum: {sum}')
 #         break
 #     else: 
 #         sum += int(userdata)
-    # print(userin)
-
+#     print(userin)
 
 
 # while userin.isnumeric() != 0:
@@ -105,22 +104,22 @@ c
 Error: Not a number
 '''
 
-# total = 0
+total = 0
 
-# while True:
+while True:
 
-#     userin = input('Please enter a value: ')
-#     if not userin.isnumeric():
-#           print('Not a number. ')
-#           break
-#     # if equal to 0, we print the sum and then we are done
-#     if userin == "0":
-#           print(f'Sum: {total}')
-#           break
-#     else:
-#           total += int(userin)
+    userin = input('Please enter a value: ')
+    if not userin.isnumeric():
+          print('Not a number. ')
+          continue
+    # if equal to 0, we print the sum and then we are done
+    if userin == "0":
+          print(f'Sum: {total}')
+          break
+    else:
+          total += int(userin)
 
-    # continue
+    continue
     
 
 

@@ -14,8 +14,8 @@ We will need 2 variables to capture the username and password. Another 2 variabl
 # username
 
 ''' A List to handle error messages '''
-error_msgs = []
-
+error_msgs = ["Invalid username. Please try again. ", "That username is already taken. Please try again. "]
+taken_user_names = ['admin', 'admin123','user1','superuser']
 
 ''' Start your while loop '''
 while True:
@@ -27,15 +27,13 @@ while True:
 
 #''' Test your username and enforce logic'''
 
-    if username[0].islower():
-        print('Great! Your first letter is lowercase')
-     
-    else: 
-        print('Your first letter must be lower case.')
-        username = input('Please enter your username: ')
+    if not username.islower():
+        print(error_msgs[0])     
+        continue
+    elif username in taken_user_names[0]:
+        print(error_msgs[1])
+        continue
 
- #''' Test your password and enforce logic'''
-         
     userpassword = input('Please enter your password: ')
     print(userpassword)
 
