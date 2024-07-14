@@ -33,7 +33,7 @@ while True:
     elif username in taken_user_names:
         print(error_msgs[1])
         continue
-    elif not username.isalnum():
+    elif not username.isidentifier():
         print(error_msgs[2])
         continue
 
