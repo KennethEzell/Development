@@ -9,32 +9,41 @@ Because sets are unordered, you can't index them like a list. They don't have in
 '''
 
 # Ways to create a set
-
+i_am_empty = set()
+new_dict = dict() # this wopuld be sn empty dictionary
+# print(i_am_empty)
 
 # What am I?
-
+check_my_type = {}
+# print(type(check_my_type))
 
 # Pass in a list, they lose their order
 my_fav_colors_list = ['green', 'blue', 'red']
+my_fav_colors_set = set(my_fav_colors_list)
+# print(my_fav_colors_set)
 
 # Unordered
 my_unordered_set = {'blue', 'green', 'red', 'orange'}
 
 # Unchangeable
 my_unchangeable_set = {'hello', 'welcome', 'to', 'newyork'}
+# my_unchangeable_set[3] = 'new jersey' # note the error
 
 # Unindexed
 my_unindexable_set = {'I', 'cant', 'be', 'indexed'}
+# print(my_unindexable_set[2])
+
 
 
 # Break up a string, removes duplicates
 word = set('abracadabra')
-
+# print(word)
 
 
 # Please remove thse duplicates by passing it into a new set named, my_unique_cars
-my_cars = {'chevy', 'toyota', 'ford', 'ford', 'honda', 'honda'}
-
+my_cars = ['chevy', 'toyota', 'ford', 'ford', 'honda', 'honda']
+my_unique_cars = set[my_cars]
+# print(my_unique_cars)
 
 # No duplicates - How did we solve this problem before?
 
@@ -66,28 +75,37 @@ states_no_duplicates = []
 # We can loop through sets
 top_ten_movies = {'shawshank redemption', 'avatar', 'avengers', 'its a wonderful life'}
 
-
+# for t in top_ten_movies:
+#     print(t)
 
 # Let's add silver .add()
-# colors = {'blue', 'green', 'red'}
+colors = {'blue', 'green', 'red'}
+colors.add('silver')
+# print(colors)
 
 
 # Lets clear all our items .clear()
-# transportation = {'cars', 'bikes', 'plane'}
+transportation = {'cars', 'bikes', 'plane'}
+transportation.clear()
+# print(transportation)
 
 
 # Lets create a copy .copy()
 sitcoms = {'friends', 'seinfeld', 'honeymooners'}
 
+sitcoms2 = sitcoms.copy()
+# print(sitcoms2)
+
 
 # Let's add to sitcome to confirm we have a copy
-
-
+sitcoms.add('in living color')
+# print(sitcoms)
 
 
 # Remove vermont from our set
-# states = {'california', 'new york', 'vermont', 'connecticut'}
-
+states = {'california', 'new york', 'vermont', 'connecticut'}
+states.remove('vermont')
+# print(states)
 
 
 # Difference - What's different?
