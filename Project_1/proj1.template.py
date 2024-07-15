@@ -17,10 +17,18 @@ We will need 2 variables to capture the username and password. Another 2 variabl
 error_msgs = ["Username must begin with a lowercase. Please try again. ", 
               "That username is already taken. Please try again.", 
               "Username must be alphanumeric.", 
-              "Password must be at least 8 characters long. ",
-              "Password must contain at least one uppercase letter. "
+              "Invalid Password. Must be at least 8 characters long. ",
+              "Invalid Password. Must contain at least one uppercase letter. ",
+              "Invalid Password. Must contain at least one lowercase letter. ",
+              "Invalid Password. Must contain at least on digit. ",
+              "Invalid Password. Must contain at least one of the following: !, ?, @, #, $, ^, &, *, _, - ",
+              "Invalid Password. Cannot contain any " " (blank) spaces. ",
+              "Incorrect Username, please try again.  ",
+              "Incorrect Password, please try again.  "
               ]
 taken_user_names = ['admin', 'admin123','user1','superuser']
+
+must_haves_in_password = ['!', '?', '@', '#', '$', '^', '&', '*', '_', '-' ]
 
 ''' Start your while loop '''
 while True:
@@ -47,21 +55,84 @@ while True:
 
 # Get userpassword
     userpassword = input('Please enter your password: ')
+    has_digit = 0
+    contains_must_haves = 0 
+    no_spaces  = 0
 
-    if len(userpassword) < 8:
+    if len(userpassword) < 8: # password must contain at least 8 characters
         print(error_msgs[3])
         continue
-    if userpassword.lower() == userpassword:
+    if userpassword.lower() == userpassword: # password must contain at least one capital character
         print(error_msgs[4])
         continue
-    else:
-        print('Good job')
+    if userpassword.upper() == userpassword: # password must contain at least one lowercase character
+        print(error_msgs[5])
+        continue
+        
+    for i in userpassword:
+        if i.isdigit():
+            has_digit += 1
+        elif i in must_haves_in_password:
+            contains_must_haves += 1
+        elif i == ' ':
+            no_spaces += 1
+            continue
+    if has_digit < 1:
+        print(error_msgs[6])
+        continue
+    if contains_must_haves < 1:
+        print(error_msgs[7])
+        continue
+    if no_spaces > 0:
+        print(error_msgs[8])
+        continue
+    if no_spaces < 1:
+        print(f'Good, no blank spaces in password. ')
+    if has_digit > 0:
+        print(f'Password has {has_digit} numbers. ')        
+    if contains_must_haves > 0:
+        print(f'Password has {contains_must_haves} must have characters. ')
+        print('Good job')    
         break
+    
+    break
 
 
     break
-print(username)
-print(userpassword)
+print(f'Your username is: {username} ')
+print(f'Your password is: {userpassword} ')
+print()
+print()
+print('Sign up successful!')
+print()
+print()
+print('Please enter username and password. ')
+
+while True:  
+
+    test_username = input("Username: ")
+    if test_username != username:
+        print()
+        print(error_msgs[9])
+        print()
+        continue
+    if test_username == username:
+        print()
+        print('Username Verified!')
+        print()
+        
+      
+    test_userpassword = input("User Password: ")
+    if test_userpassword != userpassword:
+        print()
+        print(error_msgs[10])
+        print()
+        continue
+    if test_userpassword == userpassword:
+        print()
+        print('Login Successful!!')
+        print()
+        break   
 
 
 
