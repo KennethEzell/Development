@@ -61,12 +61,15 @@ while True:
 
     if len(userpassword) < 8: # password must contain at least 8 characters
         print(error_msgs[3])
+        print()
         continue
     if userpassword.lower() == userpassword: # password must contain at least one capital character
         print(error_msgs[4])
+        print()
         continue
     if userpassword.upper() == userpassword: # password must contain at least one lowercase character
         print(error_msgs[5])
+        print()
         continue
         
     for i in userpassword:
@@ -79,12 +82,15 @@ while True:
             continue
     if has_digit < 1:
         print(error_msgs[6])
+        print()
         continue
     if contains_must_haves < 1:
         print(error_msgs[7])
+        print()
         continue
     if no_spaces > 0:
         print(error_msgs[8])
+        print()
         continue
     if no_spaces < 1:
         print(f'Good, no blank spaces in password. ')
@@ -99,6 +105,7 @@ while True:
 
 
     break
+print()
 print(f'Your username is: {username} ')
 print(f'Your password is: {userpassword} ')
 print()
