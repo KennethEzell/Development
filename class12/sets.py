@@ -109,25 +109,40 @@ states.remove('vermont')
 
 
 # Difference - What's different?
-# student_set = {'brad', 'dez', 'kenneth'}
-# student_set_2 = {'brad', 'dez', 'chelsea'}
+student_set = {'brad', 'dez', 'kenneth'}
+student_set_2 = {'brad', 'dez', 'chelsea'}
+
+# result = student_set - student_set_2
+# result = student_set.difference(student_set_2)
+# print(result)
 
 
-# Intersect - What do we have in common?
-# my_schedule = {'mon', 'wed', 'thurs'}
-# pats_schedule = {'wed', 'fri', 'sat'}
+# Intersect - What do we have in common? '&'
+my_schedule = {'mon', 'wed', 'thurs'}
+pats_schedule = {'wed', 'fri', 'sat'}
 
-# Union - All pets that appear in any set
+result = my_schedule.intersection(pats_schedule)
+# print(result)
+
+
+
+# Union - All pets that appear in any set |
 joel_pets = {'dog', 'cat', 'bird'}
 mustafa_pets = {'chickens', 'dog', 'fish'}
 sarah_pets = {'bird', 'dog', 'fish'}
 leah_pets = {'turtle'}
 
+allsets = joel_pets | mustafa_pets | sarah_pets | leah_pets # operator
+# print(allsets).
 
-# Symmetric difference - Items outside of matching items
+
+# Symmetric difference - Items outside of matching items - ^, .symmetric_difference
 
 wendy_books = {'catcher in the rye', 'richest man in babylon'}
 cain_books = {'catcher in the rye', 'richest man in babylon', 'sounder'}
+
+diff = wendy_books^cain_books
+# print(diff)
 
 
 '''
@@ -141,11 +156,13 @@ Output: {'Dominic', 'Simone'}
 '''
 
 # solved with intersection - solve with 1 or 2 lines of code
-# over_60_years = {'Dominic', 'Linda', 'Simone', 'Swathi', 'Olaf'}
-# over_5_purchases = {'Finn', 'Simone', 'Aaron', 'Dominic'}
-# customer_discount = over_60_years.intersection(over_5_purchases)
+over_60_years = {'Dominic', 'Linda', 'Simone', 'Swathi', 'Olaf'}
+over_5_purchases = {'Finn', 'Simone', 'Aaron', 'Dominic'}
+customer_discount = over_60_years.intersection(over_5_purchases)
 # print(customer_discount)
 
+customer_discount = [i for i in over_60_years if i in over_5_purchases]
+# print(customer_discount)
 
 '''
 Exercise - Sets
@@ -157,3 +174,14 @@ The set of employees that know JavaScript, but not Python
 The set of employees that know Python or JavaScript, but not both
 '''
 
+
+# declaraction of variables
+python_devs, js_devs, = set(), set()
+
+# inputs
+dev_type_input, dev_name_input = '', ''
+
+msgs = ('invalid input, please try again', 'Thank you, have a nice day')
+
+while True:
+    pass
