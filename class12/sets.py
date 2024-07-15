@@ -182,6 +182,15 @@ python_devs, js_devs, = set(), set()
 dev_type_input, dev_name_input = '', ''
 
 msgs = ('invalid input, please try again', 'Thank you, have a nice day')
+invalid_input = msgs[0]
 
 while True:
-    pass
+    dev_type_input = input("Type P for Python dev, js for Javascript, or stop to exit the program: ").casefold()
+
+    # 
+    if dev_type_input =='stop':
+        print(invalid_input)
+        break
+
+
+    print(dev_name_input)
