@@ -51,7 +51,7 @@ must_haves_in_password = ['!', '?', '@', '#', '$', '^', '&', '*', '_', '-' ]
 
 error_msgs = ["Username must begin with a lowercase. Please try again. ", 
               "That username is already taken. Please try again.", 
-              "Username must be alphanumeric.", 
+              "Username must be alphanumeric or _ .", 
               "Invalid Password. Must be at least 8 characters long. ",
               "Invalid Password. Must contain at least one uppercase letter. ",
               "Invalid Password. Must contain at least one lowercase letter. ",
@@ -74,9 +74,12 @@ while True:
 
     if username.istitle(): # check if first letter of username is upercase
         print(error_msgs[0])
-        
+
     if username in taken_user_names: # check if username is in the reserved list. Return error if so
         print(error_msgs[1])
+        
+    if not username.isidentifier(): # check if username contains alphanumeric or '_'. Return error if not
+        print(error_msgs[2])
         
 
 
