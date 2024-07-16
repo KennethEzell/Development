@@ -191,6 +191,26 @@ while True:
     if dev_type_input =='stop':
         print(invalid_input)
         break
-
-
-    print(dev_name_input)
+    
+    if dev_type_input == 'p' or dev_type_input == 'js':
+        dev_name_input = input('Please enter developers name: ').lower()
+        if dev_name_input =='stop':
+            print(msgs[0])
+            break
+        elif dev_type_input == 'p':
+            python_devs.add(dev_name_input.title())
+            print(python_devs)
+        elif dev_type_input == 'js':
+            js_devs.add(dev_name_input.title())
+            print(js_devs)
+    else:
+        print(msgs[1])
+        
+    know_both = python_devs.intersection(js_devs)
+    print(know_both)
+    know_js_not_python = js_devs.difference(python_devs)
+    print(know_js_not_python)
+    know_js_or_python_not_both = js_devs.symmetric_difference(python_devs) 
+    print(f"know both: {know_both}")
+    print(f"knows javascript but not python: {know_js_not_python}")
+    print(f"knows js or pythong but not both: {know_js_or_python_not_both}")
