@@ -70,9 +70,20 @@ while True:
     username = input('Please enter your username: ') 
     userpassword = input('Please enter your password: ')
 
-    print(username, userpassword)
+#Test your username and enforce logic#
 
-''' Test your username and enforce logic'''
+    if username.istitle(): # check if first letter of username is upercase
+        print(error_msgs[0])
+        
+    if username in taken_user_names: # check if username is in the reserved list. Return error if so
+        print(error_msgs[1])
+        
+
+
+    
+# 
+
+
 
 
 ''' Test your password and enforce logic'''
