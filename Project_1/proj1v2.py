@@ -40,6 +40,7 @@ userpassword =""
 sys_username = ""
 sys_userpassword = ""
 
+
 ''' Tables for unavailable user names, and necessary characters for password '''
 
 taken_user_names = ['admin', 'admin123','user1','superuser']
@@ -49,21 +50,24 @@ must_haves_in_password = ['!', '?', '@', '#', '$', '^', '&', '*', '_', '-' ]
 
 ''' A List to handle error messages '''
 
-error_msgs = ["Username must begin with a lowercase. ", 
+error_msgs = ["Invalid Username. Username must begin with a lowercase. ", 
               "That username is already taken.", 
               "Invalid Username. Username must be alphanumeric or _ .", 
               "Invalid Password. Must be at least 8 characters long. ",
               "Invalid Password. Must contain at least one uppercase letter. ",
               "Invalid Password. Must contain at least one lowercase letter. ",
-              "Invalid Password. Must contain at least on digit. ",
+              "Invalid Password. Must contain at least one digit. ",
               "Invalid Password. Must contain at least one of the following: !, ?, @, #, $, ^, &, *, _, - ",
-              "Invalid Password. Cannot contain any " " (blank) spaces. ",
+              "Invalid Password. Cannot contain any blank spaces. ",
               "Incorrect Username, please try again.  ",
               "Incorrect Password, please try again.  "]
 
 ''' Start your while loop '''
 
 while True:
+    has_digit = 0
+    contains_must_haves = 0 
+    no_spaces  = 0
     
 #Get your username and password#
 
@@ -72,10 +76,14 @@ while True:
     userpassword = input('Please enter your password: ')
     print()
 
-#Test your username and enforce logic#
+# Test your username and enforce logic #
 
-    if username.istitle(): # check if first letter of username is upercase
+
+    if username[0].isupper():
         print(error_msgs[0])
+        # print(username[0])
+    # if username.istitle(): # check if first letter of username is upercase
+        # print(error_msgs[0])
         # print()
 
     if username in taken_user_names: # check if username is in the reserved list. Return error if so
@@ -92,14 +100,45 @@ while True:
         print(error_msgs[3])
         # print()
 
-    if userpassword.lower() == userpassword: # password must contain at least one capital character
+    if userpassword.lower() == userpassword: # password must contain at least one uppercase character
         print(error_msgs[4])
         # print()
+
+    if userpassword.upper() == userpassword: # password must contain at least one lowercase character
+        print(error_msgs[5])   
+
+    for i in userpassword:
+        if i.isdigit():
+            has_digit += 1
+        elif i in must_haves_in_password:
+            contains_must_haves += 1
+        elif i == ' ':
+            no_spaces += 1
+    # print(has_digit, contains_must_haves)   
+    
+    if has_digit < 1: # check password for at least 1 digit
+        print(error_msgs[6])
+        # print()
         
+    if contains_must_haves < 1: # check password for one of the must have characters
+        print(error_msgs[7])
+        # print()
+        
+    if no_spaces > 0:
+        print(error_msgs[8]) # check password for blank spaces
+        # print()
+        
+    # if no_spaces < 1:
+    #     print(f'Good, no blank spaces in password. ')
+    # if has_digit > 0:
+    #     print(f'Password has {has_digit} numbers. ')        
+    # if contains_must_haves > 0:
+    #     print(f'Password has {contains_must_haves} must have characters. ')
+    #     print('Good job')    
 
 
     
-# 
+
 
 
 
