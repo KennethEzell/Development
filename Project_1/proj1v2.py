@@ -37,8 +37,8 @@ We will need 2 variables to capture the username and password. Another 2 variabl
 '''
 username = ""
 userpassword =""
-sys_username = ""
-sys_userpassword = ""
+login_username = ""
+login_userpassword = ""
 
 
 ''' Tables for unavailable user names, and necessary characters for password '''
@@ -60,7 +60,8 @@ error_msgs = ["Invalid Username. Username must begin with a lowercase. ",
               "Invalid Password. Must contain at least one of the following: !, ?, @, #, $, ^, &, *, _, - ",
               "Invalid Password. Cannot contain any blank spaces. ",
               "Incorrect Username, please try again.  ",
-              "Incorrect Password, please try again.  "]
+              "Incorrect Password, please try again.  ",
+              "Incorrect Username or Password"]
 
 ''' Start your while loop '''
 
@@ -94,7 +95,7 @@ while True:
         print(error_msgs[2])
         # print()
 
-    # Test user password #
+    # Test user password logic #
 
     if len(userpassword) < 8: # password must contain at least 8 characters
         print(error_msgs[3])
@@ -114,8 +115,7 @@ while True:
             contains_must_haves += 1
         elif i == ' ':
             no_spaces += 1
-    # print(has_digit, contains_must_haves)   
-    
+      
     if has_digit < 1: # check password for at least 1 digit
         print(error_msgs[6])
         # print()
@@ -126,16 +126,28 @@ while True:
         
     if no_spaces > 0:
         print(error_msgs[8]) # check password for blank spaces
+    
         # print()
-        
-    # if no_spaces < 1:
-    #     print(f'Good, no blank spaces in password. ')
-    # if has_digit > 0:
-    #     print(f'Password has {has_digit} numbers. ')        
-    # if contains_must_haves > 0:
-    #     print(f'Password has {contains_must_haves} must have characters. ')
-    #     print('Good job')    
 
+# If we pass, congratulate the user and immediately ask them to register #
+
+    print('Sign Up Successful!')
+    print('Please sign in')
+
+    login_username = input("Please enter your username: ")
+    login_password = input("Please enter your password: ")
+
+# If they input the correct matching info, program complete. If incorrect, send the user all the way back to the beginning of the loop to start from scratch.#
+
+    
+    if login_username  == username and login_password == userpassword:
+        print()
+        print("LOGIN SUCCESSFUL!")
+        print()
+        break
+    elif login_username != username or login_password != userpassword:
+        print(error_msgs[9])
+    
 
     
 
@@ -143,16 +155,16 @@ while True:
 
 
 
-''' Test your password and enforce logic'''
-
-
-
-''' If we pass, congratulate the user and immediately ask them to register'''
 
 
 
 
-''' If they input the correct matching info, program complete. If incorrect, send the user all the way back to the beginning of the loop to start from scratch. '''
+
+
+
+
+
+'''  '''
 
 
 
