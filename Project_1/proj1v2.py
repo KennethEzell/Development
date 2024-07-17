@@ -80,6 +80,13 @@ while True:
 
 # Test your username and enforce logic #
 
+    if username == 'stop':
+        print("Sign up canceled")
+        break
+    if userpassword == 'stop':
+        print("Sign up canceled")
+        break
+
 
     if username[0].isupper():
         print(error_msgs[0])
