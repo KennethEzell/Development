@@ -69,7 +69,7 @@ while True:
     has_digit = 0
     contains_must_haves = 0 
     no_spaces  = 0
-    has_errors = 0
+    has_errors = 0 # stored value to verify no errors before asking for final login #
     
 #Get your username and password#
 
@@ -138,7 +138,7 @@ while True:
         
             
     
-        # print()
+        
 
 # If we pass, congratulate the user and immediately ask them to register #
     if has_errors == 0:
