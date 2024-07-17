@@ -78,7 +78,7 @@ while True:
     userpassword = input('Please enter your password: ')
     print()
 
-# Test your username and enforce logic #
+# stop - break command to end loop #
 
     if username == 'stop':
         print("Sign up canceled")
@@ -86,7 +86,7 @@ while True:
     if userpassword == 'stop':
         print("Sign up canceled")
         break
-
+# Test your username and enforce logic #
 
     if username[0].isupper():
         print(error_msgs[0])
