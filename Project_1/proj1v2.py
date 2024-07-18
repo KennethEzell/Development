@@ -1,18 +1,22 @@
 
 ''' Print statement outlining rules for your application'''
-print()
-print(f"**User Name Requirements**")
-print("- Must start with a lowercase letter and only contain letters, numbers, and underscores.")
-print("- Cannot be in the list of the following usernames: admin, admin123, user1, superuser")
-print()
-print("**Password Requirements**")
-print("- Contains at least 8 characters")
-print("- Contains at least on uppercase letter")
-print("- Contains at least opne lowercase letter")
-print("- Contains at least one digit")
-print("- Contains at least one of the following: !, ?, @, #, $, ^, &, *, _, - ")
-print("- Doesnot contain any spaces")
-print()
+
+print(f'''
+
+**User Name Requirements**"
+- Must start with a lowercase letter and only contain letters, numbers, and underscores.
+- Cannot be in the list of the following usernames: admin, admin123, user1, superuser
+
+**Password Requirements**
+- Contains at least 8 characters
+- Contains at least on uppercase letter
+- Contains at least opne lowercase letter
+- Contains at least one digit
+- Contains at least one of the following: !, ?, @, #, $, ^, &, *, _, - 
+- Does not contain any spaces
+''')
+ 
+
 
 
 #     )
@@ -80,37 +84,31 @@ while True:
 
 # stop - break command to end loop #
 
-    if username == 'stop':
+    if username.lower() == 'stop':
         print("Sign up canceled")
         break
-    if userpassword == 'stop':
+    if userpassword.lower() == 'stop':
         print("Sign up canceled")
         break
+
 # Test your username and enforce logic #
 
-    if username[0].isupper():
-        print(error_msgs[0])
-        # print(username[0])
-    # if username.istitle(): # check if first letter of username is upercase
-        # print(error_msgs[0])
-        # print()
+    if username[0].isupper(): # check if first letter of username is uppercase, if yes, report error
+        print(error_msgs[0])        
 
     if username in taken_user_names: # check if username is in the reserved list. Return error if so
         print(error_msgs[1])
-        has_errors += 1
-        # print()
+        has_errors += 1        
         
     if not username.isidentifier(): # check if username contains alphanumeric or '_'. Return error if not
         print(error_msgs[2])
-        has_errors += 1
-        # print()
+        has_errors += 1      
 
-    # Test user password logic #
+    # Test user password for qualifications #
 
     if len(userpassword) < 8: # password must contain at least 8 characters
         print(error_msgs[3])
-        has_errors += 1
-        # print()
+        has_errors += 1       
 
     if userpassword.lower() == userpassword: # password must contain at least one uppercase character
         print(error_msgs[4])
