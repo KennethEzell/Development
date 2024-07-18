@@ -40,9 +40,7 @@ error_msgs = ["Username must begin with a lowercase. Please try again. ",
 We will need 2 variables to capture the username and password. Another 2 variables to use as the system username and password to authenticate against when we register
 '''
 username = ''
-username_trimmed = ''
 userpassword =''
-userpassword_trimmed = ''
 login_username = ""
 login_userpassword = ""
 
@@ -73,7 +71,7 @@ while True:
     has_digit = 0
     contains_must_haves = 0 
     no_spaces  = 0
-    has_errors = 0 # stored value to verify no errors before asking for final login #
+    has_errors = 0 # stores count value to verify if any errors occur in username or userpassword before proceding to final login #
     
 #Get your username and password#
 
@@ -81,15 +79,15 @@ while True:
     username = input('Please enter your username: ') 
     userpassword = input('Please enter your password: ')
     print()
-    username = username.strip() # removes any blank spaces before or after username
-    userpassword = userpassword.strip() # removes any blank spaces before or after userpassword
+    username = username.strip() # Removes any blank spaces before or after username
+    userpassword = userpassword.strip() # Removes any blank spaces before or after userpassword
     
 # stop - break command to end loop #
 
-    if username.lower() == 'stop':
+    if username.lower() == 'stop': # converts username 'stop' to all lowercase to check for break command
         print("Sign up canceled")
         break
-    if userpassword.lower() == 'stop':
+    if userpassword.lower() == 'stop': # converts userpassword 'stop' to all lowercsae to check for break command
         print("Sign up canceled")
         break
 
