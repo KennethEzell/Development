@@ -25,16 +25,16 @@ my_number_tuple = (1, 2, 2, 3, 3, 4, 5, 6, 7, 8, 8, 8, 8, 9, 10, 10, 10, 10)
 my_letter_tuple = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i')
 
 # Use the index tuple method to return the position of letters b, d, f, h, and i
-# print(my_letter_tuple.index('b'))
-# print(my_letter_tuple.index('d'))
-# print(my_letter_tuple.index('f'))
-# print(my_letter_tuple.index('h'))
-# print(my_letter_tuple.index('i'))
+# print(my_letter_tuple.index('b')) #1
+# print(my_letter_tuple.index('d')) #3
+# print(my_letter_tuple.index('f')) #5
+# print(my_letter_tuple.index('h')) #7
+# print(my_letter_tuple.index('i')) #8
 
 
 my_data = ('dsec', 'sdsw', 'sdwx', 'bxwx', 'lwkw')
 
-# # Access dsec via indexing
+# Access dsec via indexing
 # print(my_data[0])
 
 
@@ -50,21 +50,21 @@ my_data = ('dsec', 'sdsw', 'sdwx', 'bxwx', 'lwkw')
 
 # Add these two tuples in a new tuple called nature
 
-animals = ('giraffe', 'gazelle', 'bird', 'dog', 'cat')
+# animals = ('giraffe', 'gazelle', 'bird', 'dog', 'cat')
 
-trees = ('maple', 'redwood', 'sycamore')
+# trees = ('maple', 'redwood', 'sycamore')
 
-nature = animals + trees
+# nature = animals + trees
 
 # print(nature)
 
 # Add these two tuples in a new tuple called food
 
-fruits = ('mango', 'orange', 'apple')
+# fruits = ('mango', 'orange', 'apple')
 
-vegetables = ('zucchini', 'onion', 'garlic')
+# vegetables = ('zucchini', 'onion', 'garlic')
 
-food = fruits + vegetables
+# food = fruits + vegetables
 
 # print(food)
 
@@ -73,18 +73,18 @@ food = fruits + vegetables
 
 # Lets unpack my_tuple into variables and print out the second and last variables
 
-my_tuple = (1, 2, 3)
-num1, num2, num3 = my_tuple
+# my_tuple = (1, 2, 3)
+# num1, num2, num3 = my_tuple
 
 # print(num3)
 
 
 # Let do some looping! 
 
-weekdays = [("Monday", 1), ("Tuesday", 2), ("Wednesday", 3), ("Thursday", 4), ("Friday", 5), ("Saturday", 6), ("Sunday", 7)]
+# weekdays = [("Monday", 1), ("Tuesday", 2), ("Wednesday", 3), ("Thursday", 4), ("Friday", 5), ("Saturday", 6), ("Sunday", 7)]
 
 # for day, num in weekdays:
-    # print(f'{day} is day {num} of the week')
+#     print(f'{day} is day {num} of the week')
 
 '''
 You have a tuple of numbers:
@@ -101,10 +101,11 @@ numbers = (1,2,3,4,5,6,7,8,9,10,11,12)
 
 year = []
 
-# for i in range(len(months)):
-#     n = (months[i], numbers[i])
-#     year.append(n)
-# print(year)
 
-# for month, number in year:
-#     print(f'{month} is the month {number} of the year. ')
+for i in range(len(months)):
+    n = (months[i], numbers[i]) # we are building the tuple with each loop
+    year.append(n) # append to our empty list
+print(year)
+
+for month, number in year:
+    print(f'{month} is month {number} of the year. ')
