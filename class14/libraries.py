@@ -26,6 +26,7 @@ Lets make some magic happen with the statistics library.
 import statistics
 odd_list = [1, 2, 3, 4, 5, 2, 9, 1, 3, 4, 6, 7]
 odd_list.sort()
+# print(odd_list)
 
  # for median, mode, average
 median_of_an_odd_list = statistics.median(odd_list)
@@ -39,7 +40,7 @@ median_of_an_odd_list = statistics.median(odd_list)
 
 # average of two middle values
 even_list = [1, 2, 3, 4, 5, 2, 9, 1, 3, 4, 6, 7]
-mean_of_a_even_list = statistics.median(even_list)
+mean_of_a_even_list = statistics.mean(even_list)
 # print(mean_of_a_even_list)
 
 '''
@@ -60,17 +61,17 @@ os.chdir(os.path.dirname(os.path.abspath(__file__))) # this will generat your cs
 # os.chdir changes the current working directory to a specific path
 
 # dictionary with my users
-users = {
-  "acct_num": ['abb', 'cde', 'ggh', 'sdf'],
-  "name": ['jim', 'sarah', 'tanya', 'bob']
-}
+# users = {
+#   "acct_num": ['abb', 'cde', 'ggh', 'sdf'],
+#   "name": ['jim', 'sarah', 'tanya', 'bob']
+# }
 
-# load into a dataframe
-df = pd.DataFrame(users)
-# print(df)
+# # load into a dataframe
+# df = pd.DataFrame(users)
+# # print(df)
 
-# generate a csv in our current working directory
-df.to_csv('testing.csv', index=False)
+# # generate a csv in our current working directory
+# df.to_csv('testing.csv', index=False)
 
 '''
 Exercise
@@ -95,8 +96,8 @@ This website provides free api testing. Lets leverage python's request module to
 
 import requests
 
-my_respone = requests.get('https://jsonplaceholder.typicode.com/')
-print(my_respone.text)
+# my_respone = requests.get('https://jsonplaceholder.typicode.com/')
+# print(my_respone.text)
 
 
 
@@ -146,7 +147,7 @@ Source: https://www.tutorialspoint.com/taking-input-from-the-user-in-tkinter
 Generate PDF for your first name and favorite color
 '''
 
-import pandas as pd
+# import pandas as pd
  
  
 # # Generate pdf file in same directory as Python file
@@ -164,84 +165,84 @@ import pandas as pd
  
 # # print(pdf_variables_to_dict)
 
-pdf_template = '''
-<p style="text-align: center;"><strong> Hi, {{firstname}}, your favorite color is {{fav_color}}</strong></p>
-'''
-import os
-from jinja2 import Template
-from pyhtml2pdf import converter
+# pdf_template = '''
+# <p style="text-align: center;"><strong> Hi, {{firstname}}, your favorite color is {{fav_color}}</strong></p>
+# '''
+# import os
+# from jinja2 import Template
+# from pyhtml2pdf import converter
 
-# Formatted html for final output
-func = open("name_and_color.html", 'w')
-func.write(final_pdf.render(pdf_variables_to_dict))
+# # Formatted html for final output
+# func = open("name_and_color.html", 'w')
+# func.write(final_pdf.render(pdf_variables_to_dict))
 
-# To PDF
+# # To PDF
 
-# Cleanup
-# Formatted html for final output
-Func = open("name_and_color.html", "w")
-Func.write(final_pdf.render(pdf_variables_dict))
-Func.close()
+# # Cleanup
+# # Formatted html for final output
+# Func = open("name_and_color.html", "w")
+# Func.write(final_pdf.render(pdf_variables_dict))
+# Func.close()
  
-# To PDF
-path = os.path.abspath('name_and_color.html')
-converter.convert(f'file:///{path}', f'{first_name.lower()}.{fav_color.lower()}.pdf')
+# # To PDF
+# path = os.path.abspath('name_and_color.html')
+# converter.convert(f'file:///{path}', f'{first_name.lower()}.{fav_color.lower()}.pdf')
  
-# Cleanup
-os.remove("name_and_color.html")
+# # Cleanup
+# os.remove("name_and_color.html")
 
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
  
  
-import pandas as pd
-from jinja2 import Template
-import os
-from pyhtml2pdf import converter
-from PIL import Image
-from io import BytesIO
+# import pandas as pd
+# from jinja2 import Template
+# import os
+# from pyhtml2pdf import converter
+# from PIL import Image
+# from io import BytesIO
  
  
  
 '''
 Generate PDF for Dual Employment Signature
-'''
+# '''
  
-# Generate pdf file in same directory as Python file
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
- 
- 
-# Dictionary will capture the variables and data we want to have on the pretty pdf
-pdf_variables_dict = df.to_dict()
- 
-# Lets get the name and fav colors for our PDF!
-first_name = input("What is your first name? ").title()
-fav_color = input("What is your favorite color? ").title()
- 
-pdf_variables_dict.update({"firstname":first_name})
-pdf_variables_dict.update({"fav_color":fav_color})
+# # Generate pdf file in same directory as Python file
+# os.chdir(os.path.dirname(os.path.abspath(__file__)))
  
  
+# # Dictionary will capture the variables and data we want to have on the pretty pdf
+# pdf_variables_dict = df.to_dict()
  
-pdf_template = '''
-<p style="text-align: center;"><strong>Hi, {{ firstname}}, your favorite color is {{fav_color}}.</strong></p>
-'''
+# # Lets get the name and fav colors for our PDF!
+# first_name = input("What is your first name? ").title()
+# fav_color = input("What is your favorite color? ").title()
+ 
+# pdf_variables_dict.update({"firstname":first_name})
+# pdf_variables_dict.update({"fav_color":fav_color})
  
  
-final_pdf = Template(pdf_template)
  
-# Formatted html for final output
-Func = open("name_and_color.html", "w")
-Func.write(final_pdf.render(pdf_variables_dict))
-Func.close()
+# pdf_template = '''
+# <p style="text-align: center;"><strong>Hi, {{ firstname}}, your favorite color is {{fav_color}}.</strong></p>
+# '''
  
-# To PDF
-path = os.path.abspath('name_and_color.html')
-converter.convert(f'file:///{path}', f'{first_name.lower()}.{fav_color.lower()}.pdf')
  
-# Cleanup
-os.remove("name_and_color.html")
+# final_pdf = Template(pdf_template)
+ 
+# # Formatted html for final output
+# Func = open("name_and_color.html", "w")
+# Func.write(final_pdf.render(pdf_variables_dict))
+# Func.close()
+ 
+# # To PDF
+# path = os.path.abspath('name_and_color.html')
+# converter.convert(f'file:///{path}', f'{first_name.lower()}.{fav_color.lower()}.pdf')
+ 
+# # Cleanup
+# os.remove("name_and_color.html")
 
 
 ''' Last Exercise - Pick a library not on this list and read the documentation, try it out, have fun with it!'''
