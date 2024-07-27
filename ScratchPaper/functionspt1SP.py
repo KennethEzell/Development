@@ -77,6 +77,19 @@
  6. Write a function that will loop through a string and print whether a character is or is not a vowel.
 '''
 
+word = 'hooray'
+
+# def vowel_check(word):
+    
+#     vowels = 'aeiou'
+
+#     for w in word:
+#         if w in vowels:
+#             print(f'{w} is a vowel')
+#         else:
+#             print(f'{w} is not a vowel')
+
+# vowel_check(word)
 
 
 '''  7. Write a function that takes a list of these dictionary items. Return the first names from the list of dictionaries in a single list
@@ -86,7 +99,20 @@ students = [{'name': 'Alice', 'age': 20}, {'name': 'Bob', 'age': 22}, {'name': '
 students = [{'name': 'Alice', 'age': 20}, {'name': 'Bob', 'age': 22},
             {'name': 'Charlie', 'age': 21}]
 
+output = [] # this will hold our first names
 
+
+def first_name(students): # this function accepts a list of dictionaries
+    for s in students:
+        name = s['name']
+        output.append(name)
+    return output
+students_first_names = first_name(students)
+
+# print(students_first_names)
+# print(type(students_first_names))
+     
+# first_name(students)
 
 
 
@@ -95,13 +121,19 @@ students = [{'name': 'Alice', 'age': 20}, {'name': 'Bob', 'age': 22},
 ''' 8.  Create a function that asks the user for their name and greets them back with a hello'''
 
 
+# def hello(fname, lname):
+#     print(f'Hello {fname} {lname}!')
 
+# hello(input('Enter your first name: '), input('what is your last name: '))
 
 ''' If we print we return none'''
+# def show_none(word):
+#     print(word)
+
+# print(show_none('hello')) # the print statement will display the return value
 
 
-
-''' 9.  Write a condition that takes a list of students grades, return a dictionary with the students names and grade averages
+''' 9.  Write a function that takes a list of students grades, return a dictionary with the students names and grade averages
 
 students = [{'name': 'Alice', 'science':75, 'math':80, 'world history': 90},\
             {'name': 'Bob', 'science':50, 'math':65, 'world history': 88},\
@@ -114,6 +146,21 @@ students = [{'name': 'Alice', 'science': 75, 'math': 80, 'world history': 90},
             {'name': 'Charlie', 'science': 100, 'math': 75, 'world history': 70}]
 
 
+
+def gpa(students):
+    grade_averages = {}
+
+#     for s in students:
+#         name = s['name']
+#         grades = s['science'] + s['math'] + s['world history']
+#         average = round((grades / 3),2)
+#         grade_averages.update({name:average}) 
+#     return grade_averages
+
+# report_card = gpa(students)
+# print(report_card)
+
+# gpa(students)
 
 
 '''
@@ -137,12 +184,26 @@ transactions = [{'id': 'a', 'amount': 500, 'type': 'deposit'},
                 {'id': 'a', 'amount': 60, 'type': 'deposit'},
                 {'id': 'b', 'amount': 13, 'type': 'withdrawal'}]
 
+def account_balances(transactions):
+    balances = {} # this dictionary will hold my final balances
+    bank_sum = 0
 
-list_of_nums = [2, 4, 6, 8, 10, 20]
+    for t in transactions:
+        transaction_type = t['type']
+        amount = t['amount']
+        transaction_id = t['id']
+        if transaction_id not in balances:
+            balances.update({transaction_id: amount})
+            # otherwise it means the id exists, we can now check for type and add or subtract
+        else:
+          if transaction_type == 'deposit':
+              balances[transaction_id] = balances.get(transaction_id) + amount
+          else:
+              balances[transaction_id] = balances.get(transaction_id) - amount
+    return balances
+    
+result = account_balances(transactions)
+print(result)
+        
+        
 
-def avg_of_list(numbers):
-    return sum(numbers) / len(numbers)
-
-
-
-print(avg_of_list(list_of_nums))
