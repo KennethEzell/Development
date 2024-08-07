@@ -133,7 +133,7 @@ add_me_up = [50, 12, 9, 100, 56, 70]
 # print('Wed') 
 
 # SyntaxError: unterminated string literal
-name = 'John'  
+# name = 'John'  
 
 # SyntaxError: '(' was never closed
 # print("I hope you have a great day")
@@ -197,8 +197,8 @@ fav_animals = ['dog', 'cat', 'bird']
 #     print(i) 
 
 # TypeError: unsupported operand type(s) for +: 'int' and 'str'
-def add_two(num1, num2):
-    return num1 + num2 
+# def add_two(num1, num2):
+#     return num1 + num2 
 
 
 # print(add_two(5, 10))
@@ -206,7 +206,7 @@ def add_two(num1, num2):
 
 # Keyboard interruption exception
 
-i = 2
+# i = 2
 # while i > 0:
 #     i += 1
 #     print(i)  # KeyboardInterrupt
@@ -222,15 +222,14 @@ i = 2
 
 # Let's prevent this
 
-# num = int(input('Please enter your numerator: ')
-#           )
-# denominator = int(input('Please enter your denominator: '))
+numerator = int(input('Please enter your numerator: '))
+denominator = int(input('Please enter your denominator: '))
                   
-# try: 
-#     qkuotient = numerator / denominator
-#     print('youR QUOTIENT IS ' , quotient)
-# except ZeroDivisionError:
-#     print("sorry you cannot divide by zero")
+try: 
+    quotient = numerator / denominator
+    print('youR QUOTIENT IS ' , quotient)
+except ZeroDivisionError:
+    print("sorry you cannot divide by zero")
 
 
 

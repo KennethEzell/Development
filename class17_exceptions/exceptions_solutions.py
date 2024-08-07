@@ -313,16 +313,16 @@ The price should be a positive number, and the tax rate should be between 0 and 
 Now, test your implementation by asking the user to input a product price and sales tax rate, and call your function. Catch any potential ValueError raised by the function.
 '''
 
-def calculate_final_price(price, tax):
-    if price < 0:
-        raise ValueError
-    except ValueError:
-    print('price must be greater than 0. ')
-    return price * tax
-    print(calculate_final_price)
+# def calculate_final_price(price, tax):
+#     if price < 0:
+#         raise ValueError
+#     except ValueError:
+#     print('price must be greater than 0. ')
+#     return price * tax
+#     print(calculate_final_price)
 
-total = calculate_final_price(float(input('what is the price: ')), .5)
-print(total)
+# total = calculate_final_price(float(input('what is the price: ')), .5)
+# print(total)
 
 
 
