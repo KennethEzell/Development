@@ -186,7 +186,7 @@ denominator = 0
 #     print("Sorry you cannot divide by zero.")
 
 
-# Lets implement a try, except, than test
+# Lets implement a try, except, than test3
 
 # userin = input("Enter a number: ")
 # num_list = []
@@ -287,11 +287,11 @@ If the user inputs a negative number, raise a ValueError that will also be caugh
 
 # Propogating exceptions (functions)
 
-def average_two_nums(x, y):
-    return (x + y) / 2
+# def average_two_nums(x, y):
+#     return (x + y) / 2
 
-num1 = 5
-num2 = 4
+# num1 = 5
+# num2 = 4
 
 # num1 = 5
 # num2 = 'hello'
