@@ -1,5 +1,5 @@
 import datetime
-from datetime import datetime
+from datetime import dateti
 
 ''' classes'''
 
@@ -81,8 +81,8 @@ class Date:
             return True
         return False
     
-    # def __init__(self, year):
-    #     self.year = year
+    def __init__(self, year):
+        self.year = year
 
     def is_leap_year(self):
         """Return True if the year is a leap year, False otherwise."""
