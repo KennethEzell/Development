@@ -1,21 +1,3 @@
-# while True:
-    
-#     price = float(input("Please enter the product price: "))
-#     tax = float(input("Please enter the tax rate: "))
-#     new_price = 0
-
-#     try:
-#         if price < 0 or tax > 1 or tax < 0:
-#             raise ValueError
-#     except ValueError:
-#         print("The price must be a positive number and the tax must be between 0 and 1")  
-#     else:
-#         print("no errors so far")
-#         new_price = price + (price * tax)
-        
-#         break
-
-
 
 def calculate_final_price(): # Establish Function Name
 
@@ -45,7 +27,7 @@ def calculate_final_price(): # Establish Function Name
         
  # Final price is calculated and printed. While loop is terminated if no errors #        
         else:    
-            print(f'Your final price is: $', (price + (price * tax)))
+            print(f'Your final price is: $', "{:.2f}".format(price + (price * tax)))
             print('Thank You.  Have a Great Day!') # Added Thank you msg because it just felt right :) #    
             break   
         
