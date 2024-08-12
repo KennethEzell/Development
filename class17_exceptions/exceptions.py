@@ -222,14 +222,14 @@ fav_animals = ['dog', 'cat', 'bird']
 
 # Let's prevent this
 
-numerator = int(input('Please enter your numerator: '))
-denominator = int(input('Please enter your denominator: '))
+# numerator = int(input('Please enter your numerator: '))
+# denominator = int(input('Please enter your denominator: '))
                   
-try: 
-    quotient = numerator / denominator
-    print('youR QUOTIENT IS ' , quotient)
-except ZeroDivisionError:
-    print("sorry you cannot divide by zero")
+# try: 
+#     quotient = numerator / denominator
+#     print('youR QUOTIENT IS ' , quotient)
+# except ZeroDivisionError:
+#     print("sorry you cannot divide by zero")
 
 
 
@@ -248,6 +248,28 @@ Sometimes the age might not be in the correct format. Handle this using try-exce
 If the age is greater than or equal to 65, the customer is eligible for the discount. Otherwise, they're not eligible. Print whether the customer is eligible or not.
 
 # '''
+
+# customer_age = int(input("Input your age please: "))
+
+# if customer_age >= 65:
+#     print("You are eligible for senior discount.")
+# else:
+#     print("You are ineligible for senior discount. ")
+
+# try:
+#       customer_age = int(input("Input your age please: "))
+        
+# except ValueError:
+#     print('Age must be an integer value')
+# else:
+#     print('You are elible for discount') if customer_age >= 65 else print("You are ineligible for discount. ")
+# finally:
+#      print('I run no matter what. ')
+
+
+
+
+
 # try:
 #     customer_age = int(input('enter your age: '))
 
@@ -294,6 +316,21 @@ You can add a finally block that will be executed regardless if the try block ra
 This is good for cleaning up resources, because it will always be run.
 
 '''
+# def append_user_input(lis):
+#     try:
+#         lis.append(float(input("Enter a number: ")))
+#     except ValueError:
+#         print('Invalid input')
+#         return None
+#     finally:
+#         print("Your list", lis)
+
+# lis = []
+# append_user_input(lis)
+
+
+
+
 # lis = []
 
 # def append_user_input(lis):
@@ -318,30 +355,34 @@ Write a program to take the square root of user input.
 Use a try-except statement to ensure the user inputs a float.
 If the user inputs a negative number, raise a ValueError that will also be caught by the except statement. Make sure to write a descriptive message in the exception you raise.
 '''
+import math
 
 
 # while True:
-#     try:
-#         # user_input = math.sqrt(float(input('enter your number: ')))
-#         user_input = float(input('enter your number: '))
-#         if user_input < 0:
-#             raise ValueError
-#     except ValueError:
-#         print('you must enter a float and it cannot be a negative number')
+#    try:
+#       userin = float(input("Input your number: "))
+#       if userin < 0:
+#         raise ValueError
+#    except ValueError:
+#       print("Input must enter a float and it cannot be negative")
+#    else:
+#       print(math.sqrt(userin)) 
+#       break
 
-#     else:
-#         print(math.sqrt(user_input))
-#         break
+def avg_2_nums(x, y):
+      return (x + y) / 2
 
+num1 = 5
+num2 = 4
 
-# if user_input <0:
-#     except ValueError:
-#     print('input cannot be a negative. ')
-# else
-#     print('input must be a number')
-        
-
-
+try:
+      print(avg_2_nums(num1, num2))
+except TypeError:
+    print("We can catch the error for our function call")
+finally:
+     print("Lets do something else over and over again")
+      
+# print(avg_2_nums(num1, num2))
 
 
 
