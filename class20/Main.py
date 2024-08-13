@@ -12,9 +12,19 @@ def main():
 
 
  ''' We can see our documenttation with __doc__'''
- print(taras_acct.__doc__)
+#  print(taras_acct.__doc__)
 
 
+'''__str__ returns a string representation of your bank account object'''
+# print(taras_acct)
+
+''' deposit(amount) adds the specified amopunt to the accout balance and records ''' 
+
+# taras_acct.deposit(150, '2008-03-09')
+
+'''withdraw(amount): subtracts the specified amount from the account's balance (if there are sufficient funds) and records the transaction in the transactions list'''
+
+taras_acct.withdrawal(10000, '2020-09-06')
 
 if __name__ == '__main__':
     main()
@@ -27,9 +37,13 @@ where "__main__" is assigned to the running script, and different __name__ value
 
 Also, importing py files will automatically execute their contents. If you put the "if __name__" statement in each of the imported py file, the file will check its own __name__ value first. Since the "__main__" is only assigned to the running script, that means the imported py files will stop executing after the if-statement.
 
+
 '''
 
+taras_acct.withdrawal(250, '2020-09-05')
 
+
+taras_acct.get_balace()
 
 
 
