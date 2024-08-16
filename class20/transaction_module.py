@@ -81,10 +81,10 @@ def get_balance(self):
 
 
 
-    '''get_transactions(): returns a list of all the transactions made on the account'''
+'''get_transactions(): returns a list of all the transactions made on the account'''
 
-    def get_transactions():
-        print(f'{self.transactions}')
+def get_transactions():
+    print(f'{self.transactions}')
 
     pass
 

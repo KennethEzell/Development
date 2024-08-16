@@ -104,22 +104,22 @@ c
 Error: Not a number
 '''
 
-total = 0
+# total = 0
 
-while True:
+# while True:
 
-    userin = input('Please enter a value: ')
-    if not userin.isnumeric():
-          print('Not a number. ')
-          continue
-    # if equal to 0, we print the sum and then we are done
-    if userin == "0":
-          print(f'Sum: {total}')
-          break
-    else:
-          total += int(userin)
+#     userin = input('Please enter a value: ')
+#     if not userin.isnumeric():
+#           print('Not a number. ')
+#           continue
+#     # if equal to 0, we print the sum and then we are done
+#     if userin == "0":
+#           print(f'Sum: {total}')
+#           break
+#     else:
+#           total += int(userin)
 
-    continue
+#     continue
     
 
 
