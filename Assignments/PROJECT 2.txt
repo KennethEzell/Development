@@ -1,0 +1,9 @@
+PROJECT 2!
+
+-Successful object creation
+-String representation
+-Years worked
+-Total Expense
+-Write employees
+-Accessor and Mutator Methods
+-Doc String and Type hinting

@@ -271,10 +271,8 @@ data = [{'area': 'new-hills', 'rainfall': 100, 'temperature': 20},
 
 from datetime import datetime
 
-myts = datetime.today().strftime('%Y-%m-%d')
 
-new_df = df[{'area', 'temperature'}]
 
-new_df.to_csv(f'{myts}.csv', index=False)
+
 
         

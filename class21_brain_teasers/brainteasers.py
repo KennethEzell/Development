@@ -45,7 +45,6 @@ Output:
 #     print(palindrome_test_list)
 #     print(result_list)
 
-
 # palindrome(palindrome_test_list)
 
 '''
@@ -139,7 +138,7 @@ into this:
 
 # To be honest, this one took multiple google searches. I'm going over the dictionary class again this weekend #
 
-# convert_me = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+convert_me = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 # temp_list = ()
 # into_dictionary = {}
@@ -148,6 +147,12 @@ into this:
 
 # print(convert_me_dic)
 
+i = 0
+output = {}
+for item in convert_me:
+  output[item] = i
+  i += 1
 
+print(output)
 
 
