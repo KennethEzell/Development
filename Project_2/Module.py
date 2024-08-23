@@ -1,6 +1,7 @@
 
 
-
+from datetime import datetime
+import math
 
 
 class Employee(object):
@@ -14,4 +15,7 @@ class Employee(object):
 
     def __str__(self):
         return f'{self.name} {self.job_title} {self.department} {self.salary} {self.hire_year}'
+    
+    def years_worked(self):
+        print(f'Years worked: {datetime.now().year - self.hire_year}')
     
