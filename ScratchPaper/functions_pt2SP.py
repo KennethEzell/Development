@@ -259,3 +259,9 @@ my_numbers = [50, 12, 19, 80, 5, 75]
 
 add_me_up = [50, 12, 9, 100, 56, 70]
 '''
+from datetime import datetime
+hire_year = 2014
+salary = 100000
+
+
+print(f'Total expense: {(datetime.now().year - hire_year) * salary}')  

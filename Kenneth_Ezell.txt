@@ -1,0 +1,5 @@
+Employee Name: Kenneth Ezell
+Job Title: Analyst
+Department: Transportation
+Salary: 100000
+Year Hired: 2010

@@ -59,48 +59,48 @@ print(jeans_point)
 
  
 '''  Date Class '''
-class Date:
+# class Date:
 
-    def __injit__(self, year=1970, month=1, day=1):
-        self.year = year
-        self.month = month
-        self.day = day
+#     def __injit__(self, year=1970, month=1, day=1):
+#         self.year = year
+#         self.month = month
+#         self.day = day
 
-    def __str__(self):
-        return f'{self.month:02d}/{self.day:02d}/{self.year}'
+#     def __str__(self):
+#         return f'{self.month:02d}/{self.day:02d}/{self.year}'
     
-    def __eq__(self, other):
-        if self.year == other.year and self.month == other.month and self.day == other.day:
-            return True
-        return False
+#     def __eq__(self, other):
+#         if self.year == other.year and self.month == other.month and self.day == other.day:
+#             return True
+#         return False
     
-    def __lt__(self, other):
-        selfdate = datetime(self.year, self.month, self.day)
-        otherdate = datetime(other.year, other.month, other.day)
-        if selfdate < otherdate:
-            return True
-        return False
+#     def __lt__(self, other):
+#         selfdate = datetime(self.year, self.month, self.day)
+#         otherdate = datetime(other.year, other.month, other.day)
+#         if selfdate < otherdate:
+#             return True
+#         return False
     
-    def __init__(self, year):
-        self.year = year
+#     def __init__(self, year):
+#         self.year = year
 
-    def is_leap_year(self):
-        """Return True if the year is a leap year, False otherwise."""
-        year = self.year
-        if (year % 4 == 0):
-            if (year % 100 != 0) or (year % 400 == 0):
-                return True
-        return False    
-
-
+#     def is_leap_year(self):
+#         """Return True if the year is a leap year, False otherwise."""
+#         year = self.year
+#         if (year % 4 == 0):
+#             if (year % 100 != 0) or (year % 400 == 0):
+#                 return True
+#         return False    
 
 
-first_date = Date(2000, 10, 4)
-second_date = Date(1985, 5, 10)
+
+
+# first_date = Date(2000, 10, 4)
+# second_date = Date(1985, 5, 10)
 
     
-my_date_info = Date(2004, 10, 4)
-print(my_date_info)
+# my_date_info = Date(2004, 10, 4)
+# print(my_date_info)
 
 
 # print(point1)

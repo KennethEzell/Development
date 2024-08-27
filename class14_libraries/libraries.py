@@ -61,17 +61,17 @@ os.chdir(os.path.dirname(os.path.abspath(__file__))) # this will generat your cs
 # os.chdir changes the current working directory to a specific path
 
 # dictionary with my users
-# users = {
-#   "acct_num": ['abb', 'cde', 'ggh', 'sdf'],
-#   "name": ['jim', 'sarah', 'tanya', 'bob']
-# }
+users = {
+  "acct_num": ['abb', 'cde', 'ggh', 'sdf'],
+  "name": ['jim', 'sarah', 'tanya', 'bob']
+}
 
-# # load into a dataframe
-# df = pd.DataFrame(users)
-# # print(df)
+# load into a dataframe
+df = pd.DataFrame(users)
+# print(df)
 
-# # generate a csv in our current working directory
-# df.to_csv('testing.csv', index=False)
+# generate a csv in our current working directory
+df.to_csv('testing.csv', index=False)
 
 '''
 Exercise
