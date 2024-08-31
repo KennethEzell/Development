@@ -1,0 +1,5 @@
+Employee Name: Rebecca Ezell
+Job Title: Queen of the House
+Department: House Affairs
+Salary: 120000
+Year Hired: 2006
