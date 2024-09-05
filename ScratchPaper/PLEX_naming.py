@@ -1,3 +1,4 @@
+import pandas as pd
 
 ep_names = []
 
@@ -14,8 +15,10 @@ def plex_naming():
         filename = title + "-s" + season + "e" + str(ep_num)
     
         print(filename)
-        # ep_names.append(filename)
-    return ep_names
+        ep_names.append(filename)
+    return ep_names, title
 
 plex_naming()
-print(ep_names)
+plex_df = pd.DataFrame(ep_names, columns=['Name'])
+print(plex_df)
+plex_df.to_excel('Plex.xlsx', index=False)
