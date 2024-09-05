@@ -139,7 +139,7 @@ new_string = str(second_num)
 # Colors
 my_fav_colors = ['blue', 'black', 'purple', 'green']
 len_counts_the_items = len(my_fav_colors) # we are passing the argument mycount
-# print(what_am_i_doing)
+# print(len_counts_the_items)
 
 one_color = 'orange'
 # my_count = len(one_color)
@@ -156,10 +156,10 @@ cold_weather = 'True'
 # perimenter = side_one + base + Side_two
 # User has a triangle with one side (6), one side (7), base (4)
 
-side_one = 6
-side_two = 7
-base = 4
+# side_one = 6
+# side_two = 7
+# base = 4
 
-perimenter = (side_one + side_two + base)
-print(perimenter)
+# perimenter = (side_one + side_two + base)
+# print(perimenter)
  

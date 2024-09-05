@@ -93,7 +93,7 @@ val_two //= 4
 # print(val_two)
 
 # Modulus we use often to find if a value is odd or even
-# find the reminder if divided by 3
+# find the remainder if divided by 3
 val_three = 10
 val_three %= 3
 # print(val_three)
@@ -118,12 +118,12 @@ celsius = fahrenheith
 
 # Is 7 less than 5? <
 # print(7 < 5)
-result = (7 < 5) 
+# result = (7 < 5) 
 # print("Is 7 less thahn 5?",result)
 
 # is 4 less thank or equal to 4 <=
 # print(4 <= 4)
-result = 4 <= 4
+# result = 4 <= 4
 # print("Is 4 less than or equal to 4?", result)
 
 #Is 6 greater than 2? >
@@ -141,9 +141,9 @@ result4 = 5 >= 6
 #IS 5 EQUAL TO 5? ==
 
 # # and
-print(5 == 5 and 4 == 4) # True
-print(2 == 2 and 3 == 1) # false
-print(1 == 2 and 2 == 10) # false
+# print(5 == 5 and 4 == 4) # True
+# print(2 == 2 and 3 == 1) # false
+# print(1 == 2 and 2 == 10) # false
 
 # log_1 = (5 == 3)
 # log_2 - (4 == 7)
