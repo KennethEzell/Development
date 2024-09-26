@@ -23,7 +23,8 @@ user_data = {"user_id": 400,
 
 # # Add new key/value pair
 user_data['address'] = 'elm street'
-# print(user_data)
+# user_data['just_try'] = 'cause I wanna'
+print(user_data)
 
 # lets look at all the methods available to us
 # print(dir(user_data))
@@ -305,45 +306,45 @@ records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
 Output: {'manager': 50000, 'developer': 62500}
 '''
 
-records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},
-           {'name': 'Alice', 'title': 'developer', 'salary': 60000},
-           {'name': 'David', 'title': 'developer', 'salary': 65000}]
+# records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},
+#            {'name': 'Alice', 'title': 'developer', 'salary': 60000},
+#            {'name': 'David', 'title': 'developer', 'salary': 65000}]
 
-# our output dictionaries
+# # our output dictionaries
 
-title_salary_dict = {}
-title_count_dict = {}
+# title_salary_dict = {}
+# title_count_dict = {}
 
-for r in records:
-    # print(r)
-    title = r['title']
-    salary = r['salary']
-    # print(title)
-    # print(salary)
-    if title not in title_salary_dict:
-        title_salary_dict[title] = salary
-        title_count_dict[title] = 1
-        # print(title_salary_dict)
-        # print(title_count_dict)
-    else:
-        title_salary_dict[title] += salary
-        title_count_dict[title] += 1
+# for r in records:
+#     # print(r)
+#     title = r['title']
+#     salary = r['salary']
+#     # print(title)
+#     # print(salary)
+#     if title not in title_salary_dict:
+#         title_salary_dict[title] = salary
+#         title_count_dict[title] = 1
+#         # print(title_salary_dict)
+#         # print(title_count_dict)
+#     else:
+#         title_salary_dict[title] += salary
+#         title_count_dict[title] += 1
    
-# print('al titles and sum of salaries', title_salary_dict)
-# print()
-# # import pandas as pd
+# # print('al titles and sum of salaries', title_salary_dict)
+# # print()
+# # # import pandas as pd
 
-# result = [s:float(title_salary_dict[s])/title_count_dict[s] for s in title_salary_dict)]
+# # result = [s:float(title_salary_dict[s])/title_count_dict[s] for s in title_salary_dict)]
 
-import pandas as pd
+# import pandas as pd
 
-df = pd.DataFrame.from_records(records)
+# df = pd.DataFrame.from_records(records)
 
-result = df.groupby('title')['salary'].mean()
-# print(result)
+# result = df.groupby('title')['salary'].mean()
+# # print(result)
 
-for key, value in df.iterrows():
-    print(key, value)
+# for key, value in df.iterrows():
+#     print(key, value)
 
 
 

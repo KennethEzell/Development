@@ -9,6 +9,10 @@ Ranges
 
 # Using the range function, lets count to 20
 
+# for x in range(1,21):
+#     print(x, end=' ')
+
+
 # for x in range(21):
 #     print(x, end=' ')
 
@@ -24,11 +28,18 @@ Ranges
 
 # for i in range(4):
 #     print(i, i+1, sep=', ')
-
+# for i in range(3, 2):
+#     print(i)
 
 '''
 Write a range that is every five years from 1960 to 2000.
 '''
+
+# every_five = range(1960, 2001, 5)
+
+# for years in every_five:
+#     print(years, end=' ')
+
 # five_years = range(1960, 2001, 5)
 
 # for e in five_years:
@@ -43,6 +54,12 @@ range(start, stop, step)
 '''
 Write a range that counts down from 30 to 0
 # '''
+
+# count = range(30, -1, -1)
+
+# for i in count:
+#     print(i, end=' ')
+
 # count_down = range(30, -1, -1)
 
 # for t in count_down:
@@ -63,16 +80,16 @@ planets = ["mercury", "venus", "earth", "mars"]
 0: mercury, 1: venus, 2: earth, 3: mars
 '''
 
+
+
 # planets = ["mercury", "venus", "earth", "mars"]
+
 # output = ''
-# # 0: mercury, 1: venus, 2: earth, 3: mars
+# 0: mercury, 1: venus, 2: earth, 3: mars
 
 # for x in range(len(planets)):
 #     output += f' {x}: {planets[x]},'
 # print(output)
-
-        # print(f'{x}, {end=' '}')
-# print(f'{range(len(planets), )}: {(planets)}, end=', '')
 
 
 ''' Exercise
@@ -87,10 +104,12 @@ Cynthia's job title is engineer.
 Abdul's job title is recruiter.
 
 # '''
-
-
 # employees = ['Bob', 'Cynthia', 'Abdul']
 # job_titles = ['accountant', 'engineer', 'recruiter']
+
+# for i in range(len(employees)):
+#     print(f'{employees[i]}\'s job title is {job_titles[i]}.')
+
 
 # for i in range(len(employees)):
 #     print(employees[i] + "'s job title is " + job_titles[i])
@@ -103,13 +122,45 @@ Write some code that creates a range based on what the user enters.
 Challenge: you can make a range with 1, 2, or 3 numbers. How would you allow the user to pick any of these options?
 '''
 
+while True:
+
+
+    choice = input('choose 1, 2, or 3 for your range: ')
+
+    if choice == '1':
+        userin1 = int(input("How long is your range? "))
+        output = range(userin1)
+        for i in output:
+            print(i, end=' ')
+        break
+    if choice == '2':
+        userin1 = int(input("How long is your range? "))
+        userin2 = int(input("What is your stop value? "))
+        output = range(userin1, userin2)
+        for i in output:
+            print(i, end=' ')
+        break
+    if choice == '3':
+        userin1 = int(input("How long is your range? "))
+        userin2 = int(input("What is your stop value? "))
+        userin3 = int(input("What are your intervals? "))
+        output = range(userin1, userin2, userin3)
+        for i in output:
+            print(i, end=' ')
+        break
+    else:
+        print('Invalid input, please try again.')
+        continue
+
+
+
 # options = range(3)
 # print(options, end='')
 
 
-while True:
+# while True:
 
-    choice = input('choose 1 2 or 3 parameters for you range. ')
+    # choice = input('choose 1 2 or 3 parameters for you range. ')
 
     # if choice == '1':
     #     start_1 = int(input('how long is your range: '))
@@ -124,30 +175,30 @@ while True:
     # #         print(o, end=' ')
     # #     break
 
-    if choice == '1':
-        start_1 = int(input("What is your start value: "))
-        output_1 = range(start_1)
-        for o in output_1:
-            print(o, end=' ')
-        break
+    # if choice == '1':
+    #     start_1 = int(input("What is your start value: "))
+    #     output_1 = range(start_1)
+    #     for o in output_1:
+    #         print(o, end=' ')
+    #     break
  
-    if choice == '2':
-        start_2 = int(input("What is your start value: "))
-        stop_2 = int(input("what is your stop value: "))
-        output_2 = range(start_2, stop_2)
-        for o in output_2:
-            print(o, end=' ')
-        break
+    # if choice == '2':
+    #     start_2 = int(input("What is your start value: "))
+    #     stop_2 = int(input("what is your stop value: "))
+    #     output_2 = range(start_2, stop_2)
+    #     for o in output_2:
+    #         print(o, end=' ')
+    #     break
 
 
-    if choice == '3':
-        start_3 = int(input("What is your start value: "))
-        stop_3 = int(input("what is your stop value: "))
-        interval_3 = int(input("What is your interval value: "))
-        output_3 = range(start_3, stop_3, interval_3)
-        for o in output_3:
-            print(o, end=' ')
-        break    
+    # if choice == '3':
+    #     start_3 = int(input("What is your start value: "))
+    #     stop_3 = int(input("what is your stop value: "))
+    #     interval_3 = int(input("What is your interval value: "))
+    #     output_3 = range(start_3, stop_3, interval_3)
+    #     for o in output_3:
+    #         print(o, end=' ')
+    #     break    
     # if choice == '2':
     #     start_2 = int(input("How long is start value: "))
     #     stop_2 = int(input('What is your stop value: '))

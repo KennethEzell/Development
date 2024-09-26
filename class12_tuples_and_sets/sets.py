@@ -20,18 +20,19 @@ check_my_type = {}
 # Pass in a list, they lose their order
 my_fav_colors_list = ['green', 'blue', 'red']
 my_fav_colors_set = set(my_fav_colors_list)
-# print(my_fav_colors_set)
+# print(my_fav_colors_set)          
 
 # Unordered
 my_unordered_set = {'blue', 'green', 'red', 'orange'}
+# print(my_unordered_set)
 
 # Unchangeable
 my_unchangeable_set = {'hello', 'welcome', 'to', 'newyork'}
 # my_unchangeable_set[3] = 'new jersey' # note the error
 
 # Unindexed
-my_unindexable_set = {'I', 'cant', 'be', 'indexed'}
-# print(my_unindexable_set[2])
+my_unindexable_set = {'I', 'cant', 'be', 'indexed'}  
+# print(my_unindexable_set[2]) # NOTE THE ERROR
 
 
 
@@ -42,8 +43,10 @@ word = set('abracadabra')
 
 # Please remove thse duplicates by passing it into a new set named, my_unique_cars
 my_cars = ['chevy', 'toyota', 'ford', 'ford', 'honda', 'honda']
-my_unique_cars = set[my_cars]
+my_unique_cars = set(my_cars)
 # print(my_unique_cars)
+# print(set(my_cars))
+
 
 # No duplicates - How did we solve this problem before?
 
@@ -56,27 +59,36 @@ the list exactly once.
 ''' With a for loop and appending'''
 
 #original list
-states = ['alaska', 'alaska', 'alaska', 'alabama', 'alabama', 'new york', 'new york', 'new york']
+# states = ['alaska', 'alaska', 'alaska', 'alabama', 'alabama', 'new york', 'new york', 'new york']
 
 # # this will capture our unique states
 states_no_duplicates = []
+
+# for i in states:
+#     if i not in states_no_duplicates:
+#         states_no_duplicates.append(i)
+# print(states_no_duplicates)
+
 
 # #we will loop through states_backup, and append only the first occurence of each state into
 # for s in states:
 #     if s not in states_no_duplicates:
 #         states_no_duplicates.append(s)
 # print(states_no_duplicates)
+# print(set(states))
 
 ''' With sets and returning a list '''
 
-# states = ['alaska', 'alaska', 'alaska', 'alabama', 'alabama', 'new york', 'new york', 'new york']
+states = ['alaska', 'alaska', 'alaska', 'alabama', 'alabama', 'new york', 'new york', 'new york']
 
+removing_dupes_without_sets = list(set(states))
+# print(removing_dupes_without_sets)
 
 # We can loop through sets
 top_ten_movies = {'shawshank redemption', 'avatar', 'avengers', 'its a wonderful life'}
 
 # for t in top_ten_movies:
-#     print(t)
+    # print(t)
 
 # Let's add silver .add()
 colors = {'blue', 'green', 'red'}
@@ -112,8 +124,8 @@ states.remove('vermont')
 student_set = {'brad', 'dez', 'kenneth'}
 student_set_2 = {'brad', 'dez', 'chelsea'}
 
-# result = student_set - student_set_2
-# result = student_set.difference(student_set_2)
+# result = student_set - student_set_2 # operator, the minus sign is the operator
+# result = student_set.difference(student_set_2) # method, using the "difference" method
 # print(result)
 
 
@@ -121,7 +133,8 @@ student_set_2 = {'brad', 'dez', 'chelsea'}
 my_schedule = {'mon', 'wed', 'thurs'}
 pats_schedule = {'wed', 'fri', 'sat'}
 
-result = my_schedule.intersection(pats_schedule)
+# result = my_schedule & pats_schedule # & is the intersect
+# result = my_schedule.intersection(pats_schedule) # method, using the "intersectionJ" method
 # print(result)
 
 
@@ -132,8 +145,9 @@ mustafa_pets = {'chickens', 'dog', 'fish'}
 sarah_pets = {'bird', 'dog', 'fish'}
 leah_pets = {'turtle'}
 
-allsets = joel_pets | mustafa_pets | sarah_pets | leah_pets # operator
-# print(allsets).
+# allsets = joel_pets | mustafa_pets | sarah_pets | leah_pets # "|" operator
+# allsets = joel_pets.union(mustafa_pets, sarah_pets, leah_pets) # method, using "union" method
+# print(allsets)
 
 
 # Symmetric difference - Items outside of matching items - ^, .symmetric_difference
@@ -141,7 +155,11 @@ allsets = joel_pets | mustafa_pets | sarah_pets | leah_pets # operator
 wendy_books = {'catcher in the rye', 'richest man in babylon'}
 cain_books = {'catcher in the rye', 'richest man in babylon', 'sounder'}
 
-diff = wendy_books^cain_books
+# diff = wendy_books^cain_books 
+# diff = wendy_books.symmetric_difference(cain_books)
+
+
+# diff = wendy_books^cain_books
 # print(diff)
 
 
@@ -158,7 +176,8 @@ Output: {'Dominic', 'Simone'}
 # solved with intersection - solve with 1 or 2 lines of code
 over_60_years = {'Dominic', 'Linda', 'Simone', 'Swathi', 'Olaf'}
 over_5_purchases = {'Finn', 'Simone', 'Aaron', 'Dominic'}
-customer_discount = over_60_years.intersection(over_5_purchases)
+# customer_discount = over_60_years.intersection(over_5_purchases)
+# customer_discount = over_60_years & over_5_purchases
 # print(customer_discount)
 
 customer_discount = [i for i in over_60_years if i in over_5_purchases]
@@ -173,27 +192,26 @@ The set of employees that know both Python and JavaScript
 The set of employees that know JavaScript, but not Python
 The set of employees that know Python or JavaScript, but not both
 '''
-
-
 # declaraction of variables
 python_devs, js_devs, = set(), set()
 
 # inputs
 dev_type_input, dev_name_input = '', ''
 
-msgs = ('invalid input, please try again', 'Thank you, have a nice day')
+msgs = ('Stopping program!', 'invalid input, please try again', 'Thank you, have a nice day')
 invalid_input = msgs[0]
 
 while True:
     dev_type_input = input("Type P for Python dev, js for Javascript, or stop to exit the program: ").casefold()
 
-    # 
+    # if user enters stop, invalid input message 
     if dev_type_input =='stop':
         print(invalid_input)
         break
-    
+
+    # get a dev name, offer an exit if needed
     if dev_type_input == 'p' or dev_type_input == 'js':
-        dev_name_input = input('Please enter developers name: ').lower()
+        dev_name_input = input('Please enter developers name: ').lower() # get devs name
         if dev_name_input =='stop':
             print(msgs[0])
             break
@@ -207,10 +225,10 @@ while True:
         print(msgs[1])
         
     know_both = python_devs.intersection(js_devs)
-    print(know_both)
+    # print(know_both)
     know_js_not_python = js_devs.difference(python_devs)
-    print(know_js_not_python)
+    # print(know_js_not_python)
     know_js_or_python_not_both = js_devs.symmetric_difference(python_devs) 
-    print(f"know both: {know_both}")
+    print(f"knows both: {know_both}")
     print(f"knows javascript but not python: {know_js_not_python}")
     print(f"knows js or pythong but not both: {know_js_or_python_not_both}")
