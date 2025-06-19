@@ -1,0 +1,25 @@
+import gemini 
+import preprocessing 
+import formatting
+
+def summarize_book(book_path):
+    """Summarizes a book using the Gemini API."""
+
+    # Load and preprocess book text
+    book_text = preprocessing.load_and_clean_book(book_path)
+
+    # Define prompt for Gemini
+    prompt = "Summarize this book in 10 sentences. Focus on the main plot points and key characters."
+
+    # Use Gemini to generate summary 
+    summary = gemini.generate_text(prompt, book_text)
+
+    # Format the summary for output
+    formatted_summary = formatting.format_summary(summary)
+
+    return formatted_summary
+
+# Example usage
+book_path = "C:\Users\kenne\Downloads\The King in Yellow.txt" # Replace with actual book path
+summary = summarize_book(book_path)
+print(summary)
